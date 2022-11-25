@@ -217,8 +217,6 @@ In Abbildung 3 ist die Task-Hierarchie zu sehen.
 **Dekomposition:** T3 retrieve, T22 utilize  
 
 * **T3 retrieve**
-
-
 **Ziel:** Das Filtern der Experience Base nach relevanten Artefakten für die Problemstellung bzw. Suche.
 **Anforderungen:** keine
 **Dekomposition:** T4 specify, T8 identify, T11 evaluate, T19 select
