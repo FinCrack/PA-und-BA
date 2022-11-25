@@ -1,0 +1,1 @@
+pandoc "PA Evaluierung von DISER für den Aufbau einer Experience Base bei der COMPRA GmbH new 2.md" --citeproc --toc -M lang=de-DE -f markdown -t latex  -o patest.pdf
