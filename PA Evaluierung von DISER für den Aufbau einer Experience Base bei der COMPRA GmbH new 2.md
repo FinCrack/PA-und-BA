@@ -195,9 +195,6 @@ Dies Ziele einer Gilde decken sich mit den Zielen der Experience Factory.
 
 Die einzelnen Mitglieder der Gilde sind also dafür verantwortlich die Erfahrung aus der Arbeit des eigenen Teams in die Experience Factory zu bringen, um dann gemeinsam mit der Gilde diese Artefakte zu analysieren und zu verpacken, damit das Wissen im Unternehmen wieder verwendbar ist.
 
-
-
-
 # DISER  
 In der Einleitung der Dissertation [@tautz_2001 ] sagt Tautz, dass DISER auf dem Prnzip "learning from examples" basiert.
 
@@ -216,7 +213,7 @@ In Abbildung 3 ist die Task-Hierarchie zu sehen.
 **Anforderungen:** R18 various characterizations of one artifact  
 **Dekomposition:** T3 retrieve, T22 utilize  
 
-* **T3 retrieve**
+* **T3 retrieve**g
 **Ziel:** Das Filtern der Experience Base nach relevanten Artefakten für die Problemstellung bzw. Suche.
 **Anforderungen:** keine
 **Dekomposition:** T4 specify, T8 identify, T11 evaluate, T19 select
