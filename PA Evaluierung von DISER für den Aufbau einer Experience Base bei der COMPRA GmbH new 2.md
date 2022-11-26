@@ -208,88 +208,139 @@ In Abbildung 3 ist die Task-Hierarchie zu sehen.
 ![Task-Hierarchie](C:\Users\brunke34\Documents\PA und BA\task hierarchy.JPG)
 
 
-* **T2 reuse**<br/>
+* **T2 reuse**  
 **Ziel:** Die Wiederverwendung von Wissen und Erfahrung ist das zentrale Konzept der Experience Base und soll Qualität und Geschwindigkeit bei geringerem Aufwand erzielen.  
 **Anforderungen:** R18 various characterizations of one artifact  
 **Dekomposition:** T3 retrieve, T22 utilize  
 
-* **T3 retrieve**g
+* **T3 retrieve**  
 **Ziel:** Das Filtern der Experience Base nach relevanten Artefakten für die Problemstellung bzw. Suche.
 **Anforderungen:** keine
 **Dekomposition:** T4 specify, T8 identify, T11 evaluate, T19 select
 
-* **T4 specify**
+* **T4 specify**  
 **Ziel:** Formulierung eines Query für die Suche in der Experience Base
 **Anforderungen:** keine
 **Dekomposition:** T5 collect descriptors, 6 interpret problem, T7 infer descriptors
 
 
-* **T5 collect descriptors**
+* **T5 collect descriptors**  
 **Ziel:** Formulierung des initalen Query durch Beschreibung von Deskriptoren (Attributes, Keywords, Formulas)
 **Anforderungen:**  R9 separation of characterization and conceptual information, R35 tolerance of incomplete query information, R36 tolerance of uncertain query information, R37 tolerance of imprecise query information
 **Dekomposition:** -
 
-* **T6 interpret problem**
+* **T6 interpret problem**  
 **Ziel:** Das Query wird auf Fehler und Probleme geprüft.
 **Anforderungen:** R25 integrity constraints
 **Dekomposition:** -
 
-* **T7 infer descriptors**
+* **T7 infer descriptors**  
 **Ziel:** Das überprüfte Query wird durch das System vervollständigt.
 **Anforderungen:** R25 integrity constraints
 **Dekomposition:** -
 
-* **T8 identify**
+* **T8 identify**  
 **Ziel:** Auswahl potentiell relevanter Artefakte.
 **Anforderungen:** keine
 **Dekomposition:** T9 browse, T10 search
 
-* **T9 browse**
+* **T9 browse**  
 **Ziel:** Auswahl potenziell relevanter Artefakte durch manuelle Navigation (browsing).
 **Anforderungen:** R6 network access, R32 browsing
 **Dekomposition:** -
 
-* **T10 search**
+* **T10 search**  
 **Ziel:** Auswahl potenziell relevanter Artefakte durch Suchalgorithmus (Ausschlusskriterien).
 **Anforderungen:** R6 network access, R7 storage of various kinds of artifacts, R27 artifacts’ status
 **Dekomposition:** -
-* T11 evaluate
-* T12 recommend
-* T13 calculate similarity
 
-(R9 (separation of characterization and conceptual information),
-R20 (tolerance of incomplete information), R21 (tolerance of uncertain information), R22 (tolerance of imprecise information), R23 (transparency of
-duplicated information), R24 (tolerance of inconsistent information),
-R33 (textual search), R35 (tolerance of incomplete query information),
-R36 (tolerance of uncertain query information), R37 (tolerance of imprecise
-query information), R39 (context-sensitive retrieval))
+* **T11 evaluate**  
+**Ziel:** Ausführung der Aufgaben T12 recommend.
+**Anforderungen:** keine
+**Dekomposition:** T12 rcommend
 
-* T14 explain similarity (R34 (similarity-based retrieval))
-* T15 sort (R34 (similarity-based retrieval))
-* T19 select
-* T20 view (R3 (tool integration), R5 (access rights))
+* **T12 recommend**  
+**Ziel:** Die gefundenen Artefakte werden sortiert nach ihrer Charakterisierung, um die hilfreichsten Ergebnisse zuerst anzuzeigen
+**Anforderungen:** keine
+**Dekomposition:** T13 calculate similarity, T14 explain similarity, T15 sort
 
-* T22 utilize
-* T23 check-out (R40 check-out of artifacts)
-* T24 understand
+* **T13 calculate similarity**  
+**Ziel:** Berechne Ähnlichkeit zwischen finalem Query und einem Artefakt.
+**Anforderungen:** R9 separation of characterization and conceptual information,
+R20 tolerance of incomplete information, R21 tolerance of uncertain information, R22 tolerance of imprecise information, R23 transparency of duplicated information, R24 tolerance of inconsistent information, R33 textual search, R35 tolerance of incomplete query information, R36 tolerance of uncertain query information, R37 tolerance of imprecise query information, R39 context-sensitive retrieval
+**Dekomposition:** -
 
-(R3 (tool integration), R5 (access rights), R6 (network access),
-R29 (configurations), R32 (browsing), R41 (interface information),
-R42 (application history))
+* **T14 explain similarity**  
+**Ziel:** Erklärung der Sortierung durch Erklärung der Ähnlichkeit jedes potenziellen Artefakts
+**Anforderungen:** R34 similarity-based retrieval
+**Dekomposition:** -
 
-* T26 modify artifact (R3 (tool integration))
-* T27 modify manually (R3 (tool integration))
+* **T15 sort**  
+**Ziel:** Sortiere potenzielle Artefakte absteigend nach ihrer Ähnlichkeit zum Query.
+**Anforderungen:** R34 similarity-based retrieval
+**Dekomposition:** -
 
-* T30 incorporate (R3 (tool integration))
-* T31 give feedback (R42 (application history))
+* **T19 select**  
+**Ziel:** Benutzer selektiert die am besten passenden Artefakte.
+**Anforderungen:** keine
+**Dekomposition:** T20 View
 
-* T32 Learn (R2 (support for incremental, continuous learning),
-R14 (maintenance of experience packages))
+* **T20 view**  
+**Ziel:** Detaillierte Betrachtung der potenziellen Artefakte durch den User und finale Selektion.
+**Anforderungen:** R3 tool integration, R5 access rights
+**Dekomposition:** -
+
+* **T22 utilize**  
+**Ziel:** Verwendung der selektierten Artefakte und daraus einen Mehrwehrt zu gewinnen.
+**Anforderungen:** keine
+**Dekomposition:** T23 check-out, T24 understand, T26 modify artifact, T27 modify manually, T30 incorporate, T31 give feedback
+
+**Ziel:**
+**Anforderungen:**
+**Dekomposition:**
+
+* **T23 check-out**  
+**Ziel:** Auschecken des Artefakts durch Erstellung einer lokalen Kopie zur Bearbeitung.
+**Anforderungen:** R40 check-out of artifacts
+**Dekomposition:** -
+
+* **T24 understand**  
+**Ziel:** Herausfinden, wie die selektierten Artefakte am besten verwendet werden können.
+**Anforderungen:** R3 tool integration, R5 access rights, R6 network access,
+R29 configurations, R32 browsing, R41 interface information, R42 application history
+**Dekomposition:** -
+
+* **T26 modify artifact**  
+**Ziel:** Unterschied zwischen dem verwendeten Artefakt und der tatsächlich benötigten Erfahrung wieder in das Artefakt einfließen lassen
+**Anforderungen:** R3 tool integration
+**Dekomposition:** T27 mondify manually
+
+* **T27 modify manually**  
+**Ziel:** Editiere ein Artefakt um das tatsächlich benötigte Wissen.
+**Anforderungen:** R3 tool integration
+**Dekomposition:** -
+
+* **T30 incorporate**  
+**Ziel:** Das modifizierte Artefakt wird wieder in das System integriert.
+**Anforderungen:** R3 tool integration
+**Dekomposition:** -
+
+* **T31 give feedback**  
+**Ziel:** Feedback für die Verbesserung der Entscheidungen des Systems.
+**Anforderungen:** R42 application history
+**Dekomposition:**
+
+* **T32 Learn**  
+**Ziel:** Entscheidungsunterstützung durch das System effizienter und effektiver machen.
+**Anforderungen:** R2 support for incremental, continuous learning, R14 maintenance of experience packages
+**Dekomposition:** T33 record, T54 forget, T55 package
+
 
 * T33 record (R7 (storage of various kinds of artifacts), R26 (accommodation of growing collection))
 * T34 collect
 
 * T54 forget (R27 (artifacts’ status))
+* T55 package
 
 
 
