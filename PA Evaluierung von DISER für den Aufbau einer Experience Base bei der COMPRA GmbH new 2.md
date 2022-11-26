@@ -50,15 +50,16 @@ QIP ist als eine Feedback Loop aufgebaut, welche durch die selbst auferlegten Zi
 Im Kontrast dazu ist der CBR Zyklus mehr technischer Natur, aber grundsätzlich zielen beide Ansätze auf das Gleiche ab:
 Ein Experience Model welches im Kontext der Softwareentwicklung wiederverwendet werden kann.
 
-[@basili_caldiera_rombach_2002] definiert die Experience Factory folgendermaßen:
+[@basili_caldiera_rombach_2002] definiert die Experience Factory folgendermaßen:  
+
 > The experience factory is a logical and/or physical organization that
-> supports project developments by analyzing and synthesizing all
-> kinds of experience, acting as a repository for such experience, and
-> supplying that experience to various projects on demand. It packages experience by building
-> informal, formal or schematized, and
-> productized models and measures of various software processes,
-> products, and other forms of knowledge via people, documents,
-> and automated support.
+supports project developments by analyzing and synthesizing all
+kinds of experience, acting as a repository for such experience, and
+supplying that experience to various projects on demand. It packages experience by building
+informal, formal or schematized, and
+productized models and measures of various software processes,
+products, and other forms of knowledge via people, documents,
+and automated support.
 
 Die genannten Konzepte wurden in einer Zeit entwickelt, in welcher das häufigste Vorgehen in Softwareprojekten einer Form des Wasserfallmodells entsprach. Heutzutage, und auch bei der COMPRA GmbH, wird ein agiler Entwicklungsprozess bevorzugt.
 Der Fakt, dass CBR und QIP schon damals einer iterativen Funktionsweise zugrunde lagen zeigt, dass ein agiler, iterativer Entwicklungsansatz diese Arten von Prozessen noch viel besser einsetzen und einfacher Wert daraus gewinnen kann.
@@ -214,135 +215,156 @@ In Abbildung 3 ist die Task-Hierarchie zu sehen.
 **Dekomposition:** T3 retrieve, T22 utilize  
 
 * **T3 retrieve**  
-**Ziel:** Das Filtern der Experience Base nach relevanten Artefakten für die Problemstellung bzw. Suche.
-**Anforderungen:** keine
-**Dekomposition:** T4 specify, T8 identify, T11 evaluate, T19 select
+**Ziel:** Das Filtern der Experience Base nach relevanten Artefakten für die Problemstellung bzw. Suche.  
+**Anforderungen:** keine  
+**Dekomposition:** T4 specify, T8 identify, T11 evaluate, T19 select  
 
 * **T4 specify**  
-**Ziel:** Formulierung eines Query für die Suche in der Experience Base
-**Anforderungen:** keine
-**Dekomposition:** T5 collect descriptors, 6 interpret problem, T7 infer descriptors
-
+**Ziel:** Formulierung eines Query für die Suche in der Experience Base  
+**Anforderungen:** keine  
+**Dekomposition:** T5 collect descriptors, 6 interpret problem, T7 infer descriptors  
 
 * **T5 collect descriptors**  
-**Ziel:** Formulierung des initalen Query durch Beschreibung von Deskriptoren (Attributes, Keywords, Formulas)
-**Anforderungen:**  R9 separation of characterization and conceptual information, R35 tolerance of incomplete query information, R36 tolerance of uncertain query information, R37 tolerance of imprecise query information
-**Dekomposition:** -
+**Ziel:** Formulierung des initalen Query durch Beschreibung von Deskriptoren (Attributes, Keywords, Formulas)  
+**Anforderungen:**  R9 separation of characterization and conceptual information, R35 tolerance of incomplete query information, R36 tolerance of uncertain query information, R37 tolerance of imprecise query information  
+**Dekomposition:** -  
 
 * **T6 interpret problem**  
-**Ziel:** Das Query wird auf Fehler und Probleme geprüft.
-**Anforderungen:** R25 integrity constraints
-**Dekomposition:** -
+**Ziel:** Das Query wird auf Fehler und Probleme geprüft.  
+**Anforderungen:** R25 integrity constraints  
+**Dekomposition:** -  
 
 * **T7 infer descriptors**  
 **Ziel:** Das überprüfte Query wird durch das System vervollständigt.
-**Anforderungen:** R25 integrity constraints
-**Dekomposition:** -
+**Anforderungen:** R25 integrity constraints  
+**Dekomposition:** -  
 
 * **T8 identify**  
-**Ziel:** Auswahl potentiell relevanter Artefakte.
-**Anforderungen:** keine
-**Dekomposition:** T9 browse, T10 search
+**Ziel:** Auswahl potentiell relevanter Artefakte.  
+**Anforderungen:** keine  
+**Dekomposition:** T9 browse, T10 search  
 
 * **T9 browse**  
-**Ziel:** Auswahl potenziell relevanter Artefakte durch manuelle Navigation (browsing).
-**Anforderungen:** R6 network access, R32 browsing
-**Dekomposition:** -
+**Ziel:** Auswahl potenziell relevanter Artefakte durch manuelle Navigation (browsing).  
+**Anforderungen:** R6 network access, R32 browsing  
+**Dekomposition:** -  
 
 * **T10 search**  
-**Ziel:** Auswahl potenziell relevanter Artefakte durch Suchalgorithmus (Ausschlusskriterien).
-**Anforderungen:** R6 network access, R7 storage of various kinds of artifacts, R27 artifacts’ status
-**Dekomposition:** -
+**Ziel:** Auswahl potenziell relevanter Artefakte durch Suchalgorithmus (Ausschlusskriterien).  
+**Anforderungen:** R6 network access, R7 storage of various kinds of artifacts, R27 artifacts’ status  
+**Dekomposition:** -  
 
 * **T11 evaluate**  
-**Ziel:** Ausführung der Aufgaben T12 recommend.
-**Anforderungen:** keine
-**Dekomposition:** T12 rcommend
+**Ziel:** Ausführung von T12 recommend.  
+**Anforderungen:** keine  
+**Dekomposition:** T12 recommend  
 
 * **T12 recommend**  
-**Ziel:** Die gefundenen Artefakte werden sortiert nach ihrer Charakterisierung, um die hilfreichsten Ergebnisse zuerst anzuzeigen
-**Anforderungen:** keine
-**Dekomposition:** T13 calculate similarity, T14 explain similarity, T15 sort
+**Ziel:** Die gefundenen Artefakte werden sortiert nach ihrer Charakterisierung, um die hilfreichsten Ergebnisse zuerst anzuzeigen  
+**Anforderungen:** keine  
+**Dekomposition:** T13 calculate similarity, T14 explain similarity, T15 sort  
 
 * **T13 calculate similarity**  
-**Ziel:** Berechne Ähnlichkeit zwischen finalem Query und einem Artefakt.
+**Ziel:** Berechne Ähnlichkeit zwischen finalem Query und einem Artefakt.  
 **Anforderungen:** R9 separation of characterization and conceptual information,
-R20 tolerance of incomplete information, R21 tolerance of uncertain information, R22 tolerance of imprecise information, R23 transparency of duplicated information, R24 tolerance of inconsistent information, R33 textual search, R35 tolerance of incomplete query information, R36 tolerance of uncertain query information, R37 tolerance of imprecise query information, R39 context-sensitive retrieval
-**Dekomposition:** -
+R20 tolerance of incomplete information, R21 tolerance of uncertain information, R22 tolerance of imprecise information, R23 transparency of duplicated information, R24 tolerance of inconsistent information, R33 textual search, R35 tolerance of incomplete query information, R36 tolerance of uncertain query information, R37 tolerance of imprecise query information, R39 context-sensitive retrieval  
+**Dekomposition:** -  
 
 * **T14 explain similarity**  
-**Ziel:** Erklärung der Sortierung durch Erklärung der Ähnlichkeit jedes potenziellen Artefakts
-**Anforderungen:** R34 similarity-based retrieval
-**Dekomposition:** -
+**Ziel:** Erklärung der Sortierung durch Erklärung der Ähnlichkeit jedes potenziellen Artefakts.  
+**Anforderungen:** R34 similarity-based retrieval  
+**Dekomposition:** -  
 
 * **T15 sort**  
-**Ziel:** Sortiere potenzielle Artefakte absteigend nach ihrer Ähnlichkeit zum Query.
-**Anforderungen:** R34 similarity-based retrieval
-**Dekomposition:** -
+**Ziel:** Sortiere potenzielle Artefakte absteigend nach ihrer Ähnlichkeit zum Query.  
+**Anforderungen:** R34 similarity-based retrieval  
+**Dekomposition:** -  
 
 * **T19 select**  
-**Ziel:** Benutzer selektiert die am besten passenden Artefakte.
-**Anforderungen:** keine
-**Dekomposition:** T20 View
+**Ziel:** Benutzer selektiert die am besten passenden Artefakte.  
+**Anforderungen:** keine  
+**Dekomposition:** T20 view  
 
 * **T20 view**  
-**Ziel:** Detaillierte Betrachtung der potenziellen Artefakte durch den User und finale Selektion.
-**Anforderungen:** R3 tool integration, R5 access rights
-**Dekomposition:** -
+**Ziel:** Detaillierte Betrachtung der potenziellen Artefakte durch den User und finale Selektion.  
+**Anforderungen:** R3 tool integration, R5 access rights  
+**Dekomposition:** -  
 
 * **T22 utilize**  
-**Ziel:** Verwendung der selektierten Artefakte und daraus einen Mehrwehrt zu gewinnen.
-**Anforderungen:** keine
-**Dekomposition:** T23 check-out, T24 understand, T26 modify artifact, T27 modify manually, T30 incorporate, T31 give feedback
-
-**Ziel:**
-**Anforderungen:**
-**Dekomposition:**
+**Ziel:** Verwendung der selektierten Artefakte und daraus einen Mehrwehrt zu gewinnen.  
+**Anforderungen:** keine  
+**Dekomposition:** T23 check-out, T24 understand, T26 modify artifact, T27 modify manually, T30 incorporate, T31 give feedback  
 
 * **T23 check-out**  
-**Ziel:** Auschecken des Artefakts durch Erstellung einer lokalen Kopie zur Bearbeitung.
-**Anforderungen:** R40 check-out of artifacts
-**Dekomposition:** -
+**Ziel:** Auschecken des Artefakts durch Erstellung einer lokalen Kopie zur Bearbeitung.  
+**Anforderungen:** R40 check-out of artifacts  
+**Dekomposition:** -  
 
 * **T24 understand**  
-**Ziel:** Herausfinden, wie die selektierten Artefakte am besten verwendet werden können.
+**Ziel:** Herausfinden, wie die selektierten Artefakte am besten verwendet werden können.  
 **Anforderungen:** R3 tool integration, R5 access rights, R6 network access,
-R29 configurations, R32 browsing, R41 interface information, R42 application history
-**Dekomposition:** -
+R29 configurations, R32 browsing, R41 interface information, R42 application history  
+**Dekomposition:** -  
 
 * **T26 modify artifact**  
-**Ziel:** Unterschied zwischen dem verwendeten Artefakt und der tatsächlich benötigten Erfahrung wieder in das Artefakt einfließen lassen
-**Anforderungen:** R3 tool integration
-**Dekomposition:** T27 mondify manually
+**Ziel:** Unterschied zwischen dem verwendeten Artefakt und der tatsächlich benötigten Erfahrung wieder in das Artefakt einfließen lassen  
+**Anforderungen:** R3 tool integration  
+**Dekomposition:** T27 mondify manually  
 
 * **T27 modify manually**  
-**Ziel:** Editiere ein Artefakt um das tatsächlich benötigte Wissen.
-**Anforderungen:** R3 tool integration
-**Dekomposition:** -
+**Ziel:** Editiere ein Artefakt um das tatsächlich benötigte Wissen.  
+**Anforderungen:** R3 tool integration  
+**Dekomposition:** -  
 
 * **T30 incorporate**  
-**Ziel:** Das modifizierte Artefakt wird wieder in das System integriert.
-**Anforderungen:** R3 tool integration
-**Dekomposition:** -
+**Ziel:** Das modifizierte Artefakt wird wieder in das System integriert.  
+**Anforderungen:** R3 tool integration  
+**Dekomposition:** -  
 
 * **T31 give feedback**  
-**Ziel:** Feedback für die Verbesserung der Entscheidungen des Systems.
-**Anforderungen:** R42 application history
-**Dekomposition:**
+**Ziel:** Feedback für die Verbesserung der Entscheidungen des Systems.  
+**Anforderungen:** R42 application history  
+**Dekomposition:**  
 
 * **T32 Learn**  
-**Ziel:** Entscheidungsunterstützung durch das System effizienter und effektiver machen.
-**Anforderungen:** R2 support for incremental, continuous learning, R14 maintenance of experience packages
-**Dekomposition:** T33 record, T54 forget, T55 package
+**Ziel:** Entscheidungsunterstützung durch das System effizienter und effektiver machen.  
+**Anforderungen:** R2 support for incremental, continuous learning, R14 maintenance of experience packages  
+**Dekomposition:** T33 record, T54 forget, T55 package  
 
+* **T33 record**  
+**Ziel:** Einfügen neuer Artefakte in die Experience Base.  
+**Anforderungen:** R7 storage of various kinds of artifacts, R26 accommodation of growing collection  
+**Dekomposition:** T34 collect, T35 store  
 
-* T33 record (R7 (storage of various kinds of artifacts), R26 (accommodation of growing collection))
-* T34 collect
+* **T34 collect**  
+**Ziel:** Neue oder verbesserte Artefakte werden gesammelt.  
+**Anforderungen:** keine  
+**Dekomposition:** -  
 
-* T54 forget (R27 (artifacts’ status))
-* T55 package
+* **T35 store**  
+**Ziel:** Neue Artefakte werden in der Experience Base zur weiteren Qualifikation  gespeichert.  
+**Anforderungen:** keine  
+**Dekomposition:** T36 copy, T37 split, T38 characterize initially  
 
+* **T36 copy**  
+**Ziel:** Neue Artefakte für lokale Modifikation verfügbar machen.  
+**Anforderungen:** R3 tool integration, R5 access rights  
+**Dekomposition:** -  
 
+* **T37 split**  
+**Ziel:** Identifizierung der wiedervenwendbaren Teile eines Artefakts für die Charakterisierung.  
+**Anforderungen:** R3 tool integration  
+**Dekomposition:** -  
+
+* **T38 characterize initially**  
+**Ziel:** Charakterisierung (manuell oder automatisiert) und Speicherung der wiederverwendbaren Teile eines Artefakts.  
+**Anforderungen:** R3 tool integration, R5 access rights, R7 storage of various kinds of artifacts, R18 various characterizations of one artifact, R19 tolerance of different levels of abstraction, R20 tolerance of incomplete information, R21 tolerance of uncertain information, R22 tolerance of imprecise information, R24 tolerance of inconsistent information, R27 artifacts’ status, R38 context information  
+**Dekomposition:** -  
+
+* **T54 forget**  
+**Ziel:** Entfernen von obsoleten Artefakten aus der Experience Base.  
+**Anforderungen:** R27 artifacts’ status  
+**Dekomposition:** -  
 
 
 ## Repräsentation von Software Engineering Erfahrungen
@@ -367,11 +389,11 @@ Weiterhin enthält REFSENO Formlen für die Definition der Ähnlichkeit (similar
 
 ## Technische Infrastruktur einer Experience Base
 In [@tautz_2001 Kapitel 3] wird beschrieben, welche Anforderungen an die technische Infrastruktur einer Experience Base gestellt werden.
-In Abbildung 4 werden alle Anforderungen und ihre Abhängigkeiten aufgelistet.
+In Abbildung 4 werden alle Anforderungen und ihre Abhängigkeiten aufgelistet.  
 
-![Anforderungen technische Infrastruktur](C:\Users\brunke34\Documents\PA und BA\requirements technical infrastructure.JPG)
+![Anforderungen technische Infrastruktur](C:\Users\brunke34\Documents\PA und BA\requirements technical infrastructure.JPG)  
 
-In der Zusammenfassung des Kapitels benennt Tautz R12, R38 und R39 sowie all ihre Abhängigkeiten als die elementarsten für den Aufbau einer Experience Base. Daraus ergibt sich die folgende Liste an Anforderungen:
+In der Zusammenfassung des Kapitels benennt Tautz R12, R38 und R39 sowie all ihre Abhängigkeiten als die elementarsten für den Aufbau einer Experience Base. Daraus ergibt sich die folgende Liste an Anforderungen:  
 
 * R7 storage of various kinds of artifacts
 * R10 rationalized conceptual information
@@ -385,32 +407,31 @@ In der Zusammenfassung des Kapitels benennt Tautz R12, R38 und R39 sowie all ihr
 * R38 context information
 * R39 context sensitive retrieval
 
-Diese Anforderungen bilden nach Tautz das Minimal Viable Product für eine Experience Base.
-R12 stellt sicher, dass neue Arten von Artefakten angelegt werden können. Da eine Experience Base in einem Unternehmen über einen längeren Zeitraum wächst, wird auch die Art und Struktur der Erfahrungs-Artefakte sich im Laufe der Zeit ändern.
+Diese Anforderungen bilden nach Tautz das Minimal Viable Product für eine Experience Base.  
+R12 stellt sicher, dass neue Arten von Artefakten angelegt werden können. Da eine Experience Base in einem Unternehmen über einen längeren Zeitraum wächst, wird auch die Art und Struktur der Erfahrungs-Artefakte sich im Laufe der Zeit ändern.  
 R38 bestimmt, dass überhaupt Artefakte in der Experience Base angelegt und gespeichert werden können.
-R39 besagt, dass nur Artefakte beim Retrieval zurückgegeben werden, welche für das Projekt bzw. den Kontext relevant sind. Tautz sagt, dass R39 vor seiner Dissertation von keiner technischen Infrastruktur unterstützt wurde und die Dissertation hier zum state-of-the-art beiträgt.
+R39 besagt, dass nur Artefakte beim Retrieval zurückgegeben werden, welche für das Projekt bzw. den Kontext relevant sind. Tautz sagt, dass R39 vor seiner Dissertation von keiner technischen Infrastruktur unterstützt wurde und die Dissertation hier zum state-of-the-art beiträgt.  
 
-Für die COMPRA GmbH soll dieser kompakte Grundsatz an Funktionalität für die erste Implementierung einer Experience Base reichen.
-Es ist vorteilhaft, solch ein neues System nicht mit zu vielen Features im ersten Prototypen zu entwickeln, um früh auf Feedback der Mitarbeiter eingehen zu können und die weitere Entwicklung diesem Feedback anpassen zu können, damit das System letztendlich für die COMPRA GmbH den größten Nutzen hat.
+Für die COMPRA GmbH soll dieser kompakte Grundsatz an Funktionalität für die erste Implementierung einer Experience Base genügen.  
+Es ist vorteilhaft, solch ein neues System nicht mit zu vielen Features im ersten Prototypen zu entwickeln, um früh auf Feedback der Mitarbeiter eingehen zu können und die weitere Entwicklung diesem Feedback anpassen zu können, damit das System letztendlich für die COMPRA GmbH den größten Nutzen hat.  
 
+In [@tautz_2001 Kapitel 7] wird eine Implementierung beschrieben mit welcher die Anforderungen an die technische Infrastruktur umgesetzt werden können.  
+Um die Anforderungen zu erfüllen verwendet Tautz eine Client-Server Architektur, welche in Abbildung 4 zu sehen ist.  
 
-In [@tautz_2001 Kapitel 7] wird eine Implementierung beschrieben mit welcher die Anforderungen an die technische Infrastruktur umgesetzt werden können.
-Um die Anforderungen zu erfüllen verwendet Tautz eine Client-Server Architektur, welche in Abbildung 4 zu sehen ist.
+![Architektur der technischen Infrastruktur](C:\Users\brunke34\Documents\PA und BA\architecture of technical infrastructure.JPG)  
 
-![Architektur der technischen Infrastruktur](C:\Users\brunke34\Documents\PA und BA\architecture of technical infrastructure.JPG)
-
-Die Architektur ist in drei Ebenen unterteilt:
+Die Architektur ist in drei Ebenen unterteilt:  
 * 1. Anwendungsebene
 * 2. Zugriffsebene
 * 3. Datenbankebene
 
-Auf der Anwendungseben befinden sich alle Arten von Software, mit welchen der User interagiert. Diese werden unterteilt in Artefakt Tools und Experience-Base Tools.
-Artefakt Tools sind für die Entwicklung und Wartung von spezifischen Arten von Artefakten zuständig (Text/Dokument Editor, Prozess Modellierung etc.).
-Experience-Base Tools werden für die Wartung der Experience Base verwendet. Sie sind unabhängig von der Art der Artefakte (General Purpose Browser für die Manipulation von Einträgen in der Experiece Base, Analyse Tools).
+Auf der Anwendungseben befinden sich alle Arten von Software, mit welchen der User interagiert. Diese werden unterteilt in Artefakt Tools und Experience-Base Tools.  
+Artefakt Tools sind für die Entwicklung und Wartung von spezifischen Arten von Artefakten zuständig (Text/Dokument Editor, Prozess Modellierung etc.).  
+Experience-Base Tools werden für die Wartung der Experience Base verwendet. Sie sind unabhängig von der Art der Artefakte (General Purpose Browser für die Manipulation von Einträgen in der Experiece Base, Analyse Tools).  
 
-Die Zugriffebene ist für die Synchronisation zwischen Anwendungs- und Datenbankebene verantwortlich. Sie steuert Zugriffsrechte, erstellt Statistiken über Zugriffe und speichert Feedback für die Verbesserung der Infrastruktur.
+Die Zugriffebene ist für die Synchronisation zwischen Anwendungs- und Datenbankebene verantwortlich. Sie steuert Zugriffsrechte, erstellt Statistiken über Zugriffe und speichert Feedback für die Verbesserung der Infrastruktur.  
 
-Die Datenbankebene enthält die Datenbanksysteme für Artefakt-spezifische Daten (im Artefakt nativen Format) und Experience-Base-spezifische Daten (Charakterisierung und Schema (REFSENO)).
+Die Datenbankebene enthält die Datenbanksysteme für Artefakt-spezifische Daten (im Artefakt nativen Format) und Experience-Base-spezifische Daten (Charakterisierung und Schema (REFSENO)).  
 
 ### Technische Infrastruktur COMPRA GmbH
 
