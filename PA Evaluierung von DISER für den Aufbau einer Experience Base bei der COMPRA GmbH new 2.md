@@ -1,10 +1,9 @@
 ---
-title: "Evaluierung einer Experience Factory bei der COMPRA GmbH"
+title: "Software Engineering Experience Management System bei der COMPRA GmbH"
 date: \today
 author: "Lennard Brunke"
 fontsize: 11pt
 documentclass: article
-indent: true
 link-citations: true
 urlcolor: "blue"
 bibliography: "bibliography.bib"
@@ -14,8 +13,7 @@ csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/ha
 ---
 
 # Zusammenfassung
-In der vorliegenden Projektarbeit soll evaluiert werden, ob die DISER Methodologie geeignet ist, um bei der COMPRA GmbH eine neue Experience Factory zu entwickeln. Dieses System soll im Bereich der Softwareentwicklung des ERP Systems eEvolution und anderer Projekte der COMPRA GmbH
-Entscheidungsunterstützung bieten. [@tautz_2001]
+In der vorliegenden Projektarbeit soll evaluiert werden, ob die DISER Methodologie [@tautz_2001] geeignet ist, um bei der COMPRA GmbH ein Software Engineering Experience Management System (SEEM) zu entwickeln. Dieses System soll im Bereich der Softwareentwicklung des ERP Systems eEvolution und anderer Projekte der COMPRA GmbH Entscheidungsunterstützung bieten.
 Es wird die aktuelle Situation des Experience-Managements bei der COMPRA GmbH analysiert und im weiteren behandelt werden, wie die DISER Methodologie grundsätzlich aufgebaut ist und wie sie auf die Anforderungen der COMPRA GmbH sowie eine moderne agile Arbeitsweise angepasst werden kann.
 Das Ziel dieser und weiterführender Arbeit ist es, eine neue Experience Base bei der COMPRA GmbH aufzubauen.
 
@@ -23,32 +21,30 @@ Das Ziel dieser und weiterführender Arbeit ist es, eine neue Experience Base be
 # Einleitung
 Warum ist Erfahrungsmanagement für Unternehmen, insbesondere im Bereich der Softwareentwicklung, so wichtig?
 Reicht es aus, dass Wissen und Erfahrung im persönlichen Gespräch von Mitarbeiter zu Mitarbeiter weitergegeben oder sie sporadisch und in unterschiedlichsten Formen
-in einem Netzwerk, in einer Quellcodeverwaltung oder einem DMS abgelegt werden?
+in einem Netzwerk, in einer Quellcodeverwaltung oder einem DMS abgelegt werden?  
 
 Wie kann sichergestellt werden, dass das Wissen des eines langjährigen Mitarbeiters nicht gänzlich verloren geht, wenn dieser das Unternehmen verlässt?
 Diese einleitenden Fragen geben einen guten ersten Eindruck, warum Erfahrungsmanagement im Bereich Softwareentwicklung eine zentrale Rolle für die Produktivität der Mitarbeiter
 und die Qualität der entwickelten Produkte spielt.
 
+
 [@tautz_2001] beschreibt in der Einleitung, dass der größte Vorteil im Wettbewerb von Unternehmen in der Softwareentwicklung darin besteht, bessere Software mit mehr Features schneller und mit geringeren Kosten entwickeln zu können.
 Dieses Know-How kann durch die Konkurrenz nicht imitiert werden, da es nicht von dem Softwareprodukt ableitbar ist.
-Daraus lässt sich annehmen, dass Experience Management im Software Engineering ein entscheidender Vorteil ist, um sich von der Konkurrenz abzusetzen.
-
+Daraus lässt sich schließen, dass Experience Management im Software Engineering ein entscheidender Vorteil ist, um sich von der Konkurrenz abzusetzen.
 
 
 # Experience Factory
-> In diesem Kapitel soll das Konzept von QIP und der Experience Factory erläutert werden.
 
 Eine Experience Factory [@althoff_birk_1997] [@tautz_2001] beschreibt eine Einheit in einem Softwareunternehmen, welche kontinuierliche und inkrementelle Verbesserung der Softwareentwicklung im Unternehmen erzeugen soll. Dies wird erreicht durch die Verarbeitung und Analyse aller Arten von Wissen und Erfahrung, welche im Kontext der Softwareentwicklung relevant sind.
-Sie dient als ein Repository (Experience Base) für dieses Wissen und entspricht einer Fallbasis im Sinne von Case-Based-Reasoning.
-Weiterhin ist die Experience Factory zuständig für die Administration der Experience Base.
-
+Sie dient als ein Repository (Experience Base) für dieses Wissen und entspricht einer Fallbasis im Sinne von Case-Based-Reasoning. Weiterhin ist die Experience Factory zuständig für die Administration der Experience Base.  
 In Kapitel 1.1 beschreibt Tautz das Konzept der Experience Factory durch einen Vergleich des CBR Zyklus mit dem Paradigma QIP.
 
-Quality Improvement Paradigm [@basili_caldiera_rombach_2002] ist ein früher Ansatz für iterative Qualitätsverbesserung von Softwareprojekten.
+
+Quality Improvement Paradigm [@basili_caldiera_rombach_2002] ist ein früher Ansatz für iterative Qualitätsverbesserung von Softwareprojekten.  
 QIP zielt darauf ab, schon in der Startphase eines Softwareprojektes festzulegen, welche Erfahrungen daraus gewonnen werden können und wie dies konkret erreicht werden kann.
-QIP ist als eine Feedback Loop aufgebaut, welche durch die selbst auferlegten Ziele gesteuert wird. Im letzten Schritt von QIP wird die gewonnenen Erfahrungen in eine wieder verwendbare Form gebracht und aufbewahrt.
-Im Kontrast dazu ist der CBR Zyklus mehr technischer Natur, aber grundsätzlich zielen beide Ansätze auf das Gleiche ab:
-Ein Experience Model welches im Kontext der Softwareentwicklung wiederverwendet werden kann.
+QIP ist als eine Feedback Loop aufgebaut, welche durch die selbst auferlegten Ziele gesteuert wird. Im letzten Schritt von QIP wird die gewonnenen Erfahrungen in eine wieder verwendbare Form gebracht und aufbewahrt.  
+Im Kontrast dazu ist der CBR Zyklus mehr technischer Natur, aber grundsätzlich zielen beide Ansätze auf das Gleiche ab: Ein Experience Model welches im Kontext der Softwareentwicklung wiederverwendet werden kann.
+
 
 [@basili_caldiera_rombach_2002] definiert die Experience Factory folgendermaßen:  
 
@@ -65,64 +61,59 @@ Die genannten Konzepte wurden in einer Zeit entwickelt, in welcher das häufigst
 Der Fakt, dass CBR und QIP schon damals einer iterativen Funktionsweise zugrunde lagen zeigt, dass ein agiler, iterativer Entwicklungsansatz diese Arten von Prozessen noch viel besser einsetzen und einfacher Wert daraus gewinnen kann.
 Im Vergleich zum Gebrauch in einem Wasserfallmodell werden die Erfahrungsinkremente bei einem agilen Prozess kleiner, aber einfacher zu verarbeiten sein.
 
+
 Dies lässt grundsätzlich vermuten, dass der Aufbau und letztendlich auch der laufende Betrieb einer Experience Factory sich gut in den aktuellen agilen Entwicklungsprozess der COMPRA GmbH integrieren lässt.
 
-# Experience Repositories und Experience Management
-> In diesem Kapitel soll ein Überblick über die verschiedenen Ansätze, welche im Erfahrungsmanagement in der Softwareentwicklung genutzt werden, gegeben werden.
-> Außerdem sollten hier die Technicken beschrieben werden, die bisher bei der COMPRA GmbH für das Thema Erfahrungsmanagement verwendet werden.
+
+# COMPRA Experience Repositories und Experience Management
 
 Bei der COMPRA GmbH werden verschiedene Softwaresysteme geführt, welche neben ihrer hauptsächlichen Funktion auch als Repository für Wissens- und Erfahrungsartefakte verwendet werden. Dies geschieht nicht zwangsläufig mit der Intention des Erfahrungsmanagement, sondern ist häufig eine Konsequenz aus Kommunikation und Kollaboration.
 Nachfolgend werden alle Softwaresysteme genannt, welche in irgendeiner Form als Repository für Erfahrungsmanagement genutzt werden:
 
 * MS Team Foundation Server:
 
-  Source Control
-  Interne sowie externe Kollaborationsplattform zur Planung, Kommunikation und Dokumentation der Softwareentwiclung in allen Teams und Projekten Projekt- oder Teambezogene Wikis
+    Source Control  
+    Versioning  
+    Build Server und Tools  
+    Interne sowie externe Kollaborationsplattform zur Planung, Kommunikation und Dokumentation der Softwareentwicklung in allen Teams und Projekten  
+    Projekt- oder Teambezogene Wikis  
 
+* ELO Document Management System:
 
-* ELO Document Management System
-
-  Interne Dokumente (Personalmanagement, Gehaltsabrechnungen etc.)
-  Dokumentation von internen Prozessen und Vorgängen (Sprint Retrospektiven, Protokolle)
-
+    Interne Dokumente (Personalmanagement, Gehaltsabrechnungen etc.)  
+    Dokumentation von internen Prozessen und Vorgängen (Sprint Retrospektiven, Protokolle)  
 
 * Windows File-Server:
 
-  Ablage von verschiedensten Dateien und Dokumenten
-  Installationsdateien
-  Projektbezogene Dateien und Dokumente
-
+    Ablage von verschiedensten Dateien und Dokumenten  
+    Installationsdateien  
+    Projektbezogene Dateien und Dokumente  
 
 * ERP System eEvolution und MS SQL Server:
 
-  Erstellung von Rechnungen
-  Dokumentation von Arbeitszeiten
-  Verwaltung von Mitarbeitern und Kunden
-  CRM
+    Erstellung von Rechnungen  
+    Dokumentation von Arbeitszeiten  
+    Verwaltung und Organisation von Projekten  
+    Verwaltung von Mitarbeitern und Kunden  
+    CRM  
 
+* [eEvolution Wiki:](https://wwww.wikierp.de)
 
-* [eEvolution Wiki](https://wwww.wikierp.de)
-
-  Offizielles, zentrales Wiki für das ERP System eEvolution
+    Offizielles, zentrales Wiki für das ERP System eEvolution  
 
 * MS Teams:
 
-  Interne und externe Kommunikation und Kollaboration (Chats, Meetings).
-
+    Interne und externe Kommunikation und Kollaboration (Chats, Meetings).  
 
 * MS Sharepoint:
 
-  Teamübergreifende Kalender, Dokumentation, Verschiedenes.
-
+    Teamübergreifende Kalender, Dokumentation, Verschiedenes.  
 
 * Yammer:
 
-  Internes soziales Netzwerk
-
+    Internes soziales Netzwerk  
 
 * Email und IP-Telefon
-
-
 
 Vergleichen wir diese Systeme mit den von Tautz aufgeführten vorhandenen Ansätzen für Erfahrungs-Repositories wird deutlich, dass eine ganze Reihe bei der COMPRA GmbH im Einsatz sind:
 
@@ -197,16 +188,19 @@ Dies Ziele einer Gilde decken sich mit den Zielen der Experience Factory.
 Die einzelnen Mitglieder der Gilde sind also dafür verantwortlich die Erfahrung aus der Arbeit des eigenen Teams in die Experience Factory zu bringen, um dann gemeinsam mit der Gilde diese Artefakte zu analysieren und zu verpacken, damit das Wissen im Unternehmen wieder verwendbar ist.
 
 # DISER  
-In der Einleitung der Dissertation [@tautz_2001 ] sagt Tautz, dass DISER auf dem Prnzip "learning from examples" basiert.
+
+DISER (designing and implementing software engineering repositories) ist eine Methodologie für den Entwurft und die Implementierung eines Experience Management Systems im Kontext der Softwareentwicklung und zielt darauf ab, diesen Prozess effektiv und effizient zu machen.  
+DISERR soll eine Alternative zur üblich gelebten Praxis bieten, welche normalerweise daraus besteht, Kollegen zu befragen sowie manuell verschiedenste Datenquellen im Firmennetz zu durchsuchen.  
+Die grundlegende Strategie von DISER ist dabei "learning from examples", welche bereits im Feld des Machine Learning erfolgreich angewendet wird. Erfahrungen aus vergangenen Softwareprojekten werden in einem System gespeichert und für die Wiederverwendung in anderen Projekten aufbereitet, um Probleme und Anforderungen in diesen Projekten effizienter und effektiver lösen zu können. Dabei wird das wiederverwendbare Wissen inkrementell erweitert und verbessert um ein kontinuierliches Lernen zu erreichen [@tautz_2001 Kapitel 1].  
 
 ## Tasks für den Aufbau einer Experience Base
 In [@tautz_2001 Kapitel 4] entwickelt Tautz ein allgemein gültiges Task Framework für den Aufbau und Betrieb einer Experience Base. Unternehmen können sich anhand dieser Task Hierarchie abhängig von ihren spezifischen Anforderungen selektieren, welche Aufgaben von der Experience Base ausgeführt werden sollen.
 Dabei definiert Tautz für jede Aufgabe das dadurch erreichte Ziel, Ein- und Ausgabe, die Anforderungen um die Tätigkeit ausführen zu können, eine Dekomposition in Unteraufgaben sowie eine allgemeine Beschreibung zur Ausführung der Aufgabe.
-In diesem Kapitel werden die Tasks selektiert, welche für den Betrieb einer Experience Base bei der COMPRA benötigt werden. Anhand dieser Tasks lassen sich die Anforderungen an das System festlegen.
+In diesem Kapitel werden die Tasks selektiert, welche für den Betrieb einer Experience Base bei der COMPRA benötigt werden. Anhand dieser Tasks lassen sich die Anforderungen an das System festlegen. Die Tasks werden so selektiert, dass ein minimum viable product (MVP) entwickelt werden kann welches einerseits die Anforderungen der COMPRA GmbH erfüllt, andererseits aber auch keine nicht zwingend benötigten Features enthält.  
 Hierbei werde ich nur eine kurze Zusammenfassung der jeweiligen Tasks sowie ihre Anforderungen und Dekomposition nennen, wobei die Dekomposition nur tatsächlich selektierte Aufgaben enthält. Weitere Details sind [@tautz_2001 Kapitel 4] zu entnehmen.  
 In Abbildung 3 ist die Task-Hierarchie zu sehen.
 
-![Task-Hierarchie](C:\Users\brunke34\Documents\PA und BA\task hierarchy.JPG)
+![Task-Hierarchie](task hierarchy.JPG)
 
 
 * **T2 reuse**  
@@ -368,62 +362,79 @@ R29 configurations, R32 browsing, R41 interface information, R42 application his
 
 
 ## Repräsentation von Software Engineering Erfahrungen
-> In diesem Kapitel soll [@tautz_2001] Kapitel 6 zusammgengefasst werden.
 
 Eine der elementarsten Fragen für den Aufbau einer neuen Experience Base ist, nach welchem Schema das Wissen und die Erfahrung strukturiert sein soll. Dies ist wichtig, um einerseits das Erfassen von Artefakten einfach und intuitiv zu halten und sie in der alltäglichen Kommunikation verwenden zu können, aber auch um die spezifischen Anforderungen des Unternehmens sowie der Softwareentwicklung abzudecken.
 
 ### REFSENO
-REFSENO (representation formalism for software engineering ontologies) [@tautz_wagenheim_1998] beschreibt wie die Informationen in einer Experience Base formuliert und strukturiert werden können, um optimal für eine Experience Base im Bereich der Softwareentwicklung genutzt werden zu können. [@tautz_2001 Kapitel 6]
+REFSENO (representation formalism for software engineering ontologies) [@tautz_wagenheim_1998] [@tautz_2001 Kapitel 6] beschreibt wie die Informationen in einer Experience Base formuliert und strukturiert werden können, um optimal im Bereich der Softwareentwicklung genutzt werden zu können.
 Es ist eine Kombination aus Ideen aus den Bereichen Datenbanken, fallbasiertes Schließen und wissensbasierten Systemen. Es ist ein objektorientiertes Modell und hat Ähnlichkeiten zu UML.
 
 REFSENO's zentrales Element wird durch "concepts" definiert, welche Software Engineering Artefakte modellieren. Concepts setzen sich durch Attribute zusammen, welches entweder Informationen für die Speicherung und das Retrieval enthalten oder Relationen zu anderen Artefakten beschreiben (terminal and non terminal attributes).
 Weiterhin enthält REFSENO Formlen für die Definition der Ähnlichkeit (similarity), automatische Berechnung von Attributen (value inferences) und weitere Bedingungen, welche immer als true evaluiert werden müssen (assertations).
 
 
-
-
-
-
-
-## GOODSEE (goal-oriented ontology development for software engineering experience)
-
 ## Technische Infrastruktur einer Experience Base
 In [@tautz_2001 Kapitel 3] wird beschrieben, welche Anforderungen an die technische Infrastruktur einer Experience Base gestellt werden.
-In Abbildung 4 werden alle Anforderungen und ihre Abhängigkeiten aufgelistet.  
+In Abbildung 3 werden alle Anforderungen und ihre Abhängigkeiten aufgelistet.  
 
-![Anforderungen technische Infrastruktur](C:\Users\brunke34\Documents\PA und BA\requirements technical infrastructure.JPG)  
+![Anforderungen technische Infrastruktur](requirements technical infrastructure.JPG)  
 
-In der Zusammenfassung des Kapitels benennt Tautz R12, R38 und R39 sowie all ihre Abhängigkeiten als die elementarsten für den Aufbau einer Experience Base. Daraus ergibt sich die folgende Liste an Anforderungen:  
-
-* R7 storage of various kinds of artifacts
-* R10 rationalized conceptual information
-* R12 accomodation of new artifact kinds
-* R11 modularity of conceptual information
-* R17 artifact recording
-* R27 artifacts' status
-* R28 versioning
-* R29 configuration
-* R34 similarity-based retrieval
-* R38 context information
-* R39 context sensitive retrieval
-
-Diese Anforderungen bilden nach Tautz das Minimal Viable Product für eine Experience Base.  
+In der Zusammenfassung des Kapitels benennt Tautz R12, R38 und R39 sowie all ihre Abhängigkeiten als die elementarsten für den Aufbau einer Experience Base und bilden somit das Minimal Viable Product für eine Experience Base.  
 R12 stellt sicher, dass neue Arten von Artefakten angelegt werden können. Da eine Experience Base in einem Unternehmen über einen längeren Zeitraum wächst, wird auch die Art und Struktur der Erfahrungs-Artefakte sich im Laufe der Zeit ändern.  
 R38 bestimmt, dass überhaupt Artefakte in der Experience Base angelegt und gespeichert werden können.
 R39 besagt, dass nur Artefakte beim Retrieval zurückgegeben werden, welche für das Projekt bzw. den Kontext relevant sind. Tautz sagt, dass R39 vor seiner Dissertation von keiner technischen Infrastruktur unterstützt wurde und die Dissertation hier zum state-of-the-art beiträgt.  
 
-Für die COMPRA GmbH soll dieser kompakte Grundsatz an Funktionalität für die erste Implementierung einer Experience Base genügen.  
-Es ist vorteilhaft, solch ein neues System nicht mit zu vielen Features im ersten Prototypen zu entwickeln, um früh auf Feedback der Mitarbeiter eingehen zu können und die weitere Entwicklung diesem Feedback anpassen zu können, damit das System letztendlich für die COMPRA GmbH den größten Nutzen hat.  
+* R2 support for incremental, continuous learning
+* R3 tool integration
+* R5 access rights
+* R6 network access,
+* **R7 storage of various kinds of artifacts**
+* R9 separation of characterization and conceptual information
+* **R10 rationalized conceptual information**
+* **R11 modularity of conceptual information**
+* **R12 accomodation of new artifact kinds**
+* R14 maintenance of experience packages
+* **R17 artifact recording**
+* R18 various characterizations of one artifact
+* R19 tolerance of different levels of abstraction
+* R20 tolerance of incomplete information
+* R21 tolerance of uncertain information
+* R22 tolerance of imprecise information
+* R23 transparency of duplicated information
+* R24 tolerance of inconsistent information
+* R25 integrity constraints
+* R26 accommodation of growing collection
+* **R27 artifacts' status**
+* **R28 versioning**
+* **R29 configuration**
+* R32 browsing
+* R33 textual search
+* **R34 similarity-based retrieval**
+* R35 tolerance of incomplete query information
+* R36 tolerance of uncertain query information
+* R37 tolerance of imprecise query information
+* **R38 context information**
+* **R39 context sensitive retrieval**
+* R40 check-out of artifacts
+* R41 interface information
+* R42 application history  
+
+
+Diese Liste sind alle Anforderungen der COMPRA GmbH an eine Experience Base. Dabei werden die fett markierten Anforderungen als zwingend notwendig erachtet, bei allen weiteren Anforderungen kann bei der Implementierung abgewägt werden, ob der Verlust eines Features für den initialen Prototypen angemessen ist, um den Entwicklungsaufwand zu verringern.
+Es kann vorteilhaft sein, solch ein neues System nicht mit zu vielen Features im ersten Prototypen zu entwickeln, um früh auf Feedback der Mitarbeiter eingehen zu können und die weitere Entwicklung diesem Feedback anpassen zu können, damit das System letztendlich für die COMPRA GmbH den größten Nutzen hat.  
+
+## Technische Infrastruktur Architektur
 
 In [@tautz_2001 Kapitel 7] wird eine Implementierung beschrieben mit welcher die Anforderungen an die technische Infrastruktur umgesetzt werden können.  
 Um die Anforderungen zu erfüllen verwendet Tautz eine Client-Server Architektur, welche in Abbildung 4 zu sehen ist.  
 
-![Architektur der technischen Infrastruktur](C:\Users\brunke34\Documents\PA und BA\architecture of technical infrastructure.JPG)  
+![Architektur der technischen Infrastruktur](architecture of technical infrastructure.JPG)  
 
-Die Architektur ist in drei Ebenen unterteilt:  
-* 1. Anwendungsebene
-* 2. Zugriffsebene
-* 3. Datenbankebene
+Die Architektur ist in drei Ebenen unterteilt:
+
+1. Anwendungsebene
+2. Zugriffsebene
+3. Datenbankebene
 
 Auf der Anwendungseben befinden sich alle Arten von Software, mit welchen der User interagiert. Diese werden unterteilt in Artefakt Tools und Experience-Base Tools.  
 Artefakt Tools sind für die Entwicklung und Wartung von spezifischen Arten von Artefakten zuständig (Text/Dokument Editor, Prozess Modellierung etc.).  
@@ -433,33 +444,11 @@ Die Zugriffebene ist für die Synchronisation zwischen Anwendungs- und Datenbank
 
 Die Datenbankebene enthält die Datenbanksysteme für Artefakt-spezifische Daten (im Artefakt nativen Format) und Experience-Base-spezifische Daten (Charakterisierung und Schema (REFSENO)).  
 
-### Technische Infrastruktur COMPRA GmbH
-
 Grundsätzlich ist eine Client Server Architektur für die COMPRA eine sinnvolle Wahl. Die beschriebene technische Infrastruktur hat den Vorteil, dass sie an die spezifischen Anforderungen der COMPRA angepasst werden kann.
 Für die Anwendungsebene bedeutet dies, dass aktuell bereits eingesetzte Software für die Experience Base verwendet werden kann.
 Der wichtigste Teil in der Anwendungsebene für die COMPRA GmbH ist dabei der Team Foundation Server, welcher über ein Web-basiertes UI verwendet wird.
 So sollte es für die Workitems des Team Foundation Servers möglich sein, diese in die Experience Base zu importieren und daraus generierte Artefakt bearbeiten zu können.
 
-
-
-
-
-
-
-
-
-## DISER Task Framework
-## DISER Anforderungen
-
-
-## Wissensquellen
-
 # Fazit
-
-
-
-
-# Relevante Kapitel aus [Tau001]
-T32 LEARN Decomposition: record (T33, page 107), analyze SEEMS (T50, page 116), forget (T54, page 119), package (T55, page 120)
 
 # Literaturverzeichnis
