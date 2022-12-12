@@ -199,6 +199,7 @@ In [@tautz_2001 Kapitel 4] entwickelt Tautz ein allgemein gültiges Task Framewo
 Dabei definiert Tautz für jede Aufgabe das dadurch erreichte Ziel, Ein- und Ausgabe, die Anforderungen um die Tätigkeit ausführen zu können, eine Dekomposition in Unteraufgaben sowie eine allgemeine Beschreibung zur Ausführung der Aufgabe.
 In diesem Kapitel werden die Tasks selektiert, welche für den Betrieb einer Experience Base bei der COMPRA benötigt werden. Anhand dieser Tasks lassen sich die Anforderungen an das System festlegen. Die Tasks werden so selektiert, dass ein minimum viable product (MVP) entwickelt werden kann welches einerseits die Anforderungen der COMPRA GmbH erfüllt, andererseits aber auch keine nicht zwingend benötigten Features enthält.  
 Hierbei werde ich nur eine kurze Zusammenfassung der jeweiligen Tasks sowie ihre Anforderungen und Dekomposition nennen, wobei die Dekomposition nur tatsächlich selektierte Aufgaben enthält. Weitere Details sind [@tautz_2001 Kapitel 4] zu entnehmen.  
+
 In Abbildung 3 ist die Task-Hierarchie zu sehen.
 
 ![Task-Hierarchie](task hierarchy.JPG)
@@ -366,10 +367,10 @@ R29 configurations, R32 browsing, R41 interface information, R42 application his
 **Anforderungen:** keine
 **Dekomposition:** T56 structure
 
-* **T56 structure**
-**Ziel:** Das Wissen in der Experience Base verändern und die Infrastruktur darauf anpassen.
-**Anforderungen:** : R12 accommodation of new artifact kinds, R13 maintenance of conceptual information
-**Dekomposition:** -
+* **T56 structure**  
+**Ziel:** Das Wissen in der Experience Base verändern und die Infrastruktur darauf anpassen.  
+**Anforderungen:** : R12 accommodation of new artifact kinds, R13 maintenance of conceptual information  
+**Dekomposition:** -  
 
 ## REFSENO
 
@@ -405,18 +406,19 @@ Das Schema des SEEMS bei der COMPRA GmbH wird basierend auf REFSENO entwickelt w
 
 ## GOODSEE
 
-Durch REFSENO wird ein Repräsentationsformalismun für Software Engineering Erfahrung definiert, wie der Inhalt einer Experience Base letztendlich aber struktiriert sein soll, ist stark abhängig von dem Unternehmen in der sie eingesetzt und muss auf die individuellen Anforderungen ausgelegt sein.
+Durch REFSENO wird ein Repräsentationsformalismun für Software Engineering Erfahrung definiert, wie der Inhalt einer Experience Base letztendlich aber struktiriert sein soll, ist stark abhängig von dem Unternehmen in der sie eingesetzt wird und muss auf die individuellen Anforderungen ausgelegt sein.
 Der Task T56 structure ist dafür zuständig, das Wissen in der Experience Base zu definieren und in Abhängigkeit davon die Architektur des SEEMS definierbar zu machen.
 
 GOODSEE (goal-oriented ontology development for software engineering experience) [@tautz_2001 Kapitel 8] ist eine Methodologie für die zielgerichtete Entwicklung eines Experiece Base Schemas.
 
 Der Ablauf von GOODSEE lässt sich in folgenden Schritten zusammenfassen:
-1. Identifikation von Stakeholdern und deren Interessen um Ziele der Experience Factory zu formulieren.
-2. Identifikation von Themenbereichen und Szenarien der Wissenakquisition und Wissenwiederverwendung (reuse).
-3. Definition der benötigten Information um identifizierte Szenarien erfüllen zu können.
-4. Definition des Experience Base Schemas mit REFSENO
-5. Definition von Vorschriften für die Erstellung von neuen Informationen
-6. Definition der Implementierung (Architektur)
+
+1. Identifikation von Stakeholdern und deren Interessen um Ziele der Experience Factory zu formulieren.  
+2. Identifikation von Themenbereichen und Szenarien der Wissenakquisition und Wissenwiederverwendung (reuse).  
+3. Definition der benötigten Information um identifizierte Szenarien erfüllen zu können.  
+4. Definition des Experience Base Schemas mit REFSENO  
+5. Definition von Vorschriften für die Erstellung von neuen Informationen  
+6. Definition der Implementierung (Architektur)  
 
 Carsten Tautz entwickelt in diesem Kapitel sein Task Framework für die Entwicklung von Experience Bases weiter, allerdings fokussiert auf den Aspekt der Strukturierung des Schemas (T56 structure).
 Die größte Herausforderung für die Entwicklung eines Schemas ist dabei die passende Balance zu finden. Balance heißt in diesem Fall, einerseits allgemein genung zu sein, um die gesamte Domäne abzudecken, andererseits aber speziell genung zu sein, um tatsächlich nützliche Artefakte für die Lösung von Problemen bereistellen zu können.
