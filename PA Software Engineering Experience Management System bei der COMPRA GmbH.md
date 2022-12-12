@@ -8,9 +8,11 @@ link-citations: true
 urlcolor: "blue"
 bibliography: "bibliography.bib"
 language: "de-DE"
-csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/harvard-anglia-ruskin-university.csl"
+csl: "harvard style.csl"
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 # Zusammenfassung
 In der vorliegenden Projektarbeit soll evaluiert werden, ob die DISER Methodologie [@tautz_2001] geeignet ist, um bei der COMPRA GmbH ein Software Engineering Experience Management System (SEEM) zu entwickeln. Dieses System soll im Bereich der Softwareentwicklung des ERP Systems eEvolution und anderer Projekte der COMPRA GmbH Entscheidungsunterstützung bieten.
@@ -63,7 +65,7 @@ Im Vergleich zum Gebrauch in einem Wasserfallmodell werden die Erfahrungsinkreme
 Folglich ist eine Experience Factory in den aktuellen agilen Entwicklungsprozess der COMPRA GmbH integrierbar.
 
 
-# COMPRA Experience Repositories und Experience Management
+# Experience Repositories und Management
 
 Bei der COMPRA GmbH werden verschiedene Softwaresysteme geführt, welche neben ihrer hauptsächlichen Funktion auch als Repository für Wissens- und Erfahrungsartefakte verwendet werden. Dies geschieht nicht zwangsläufig mit der Intention des Erfahrungsmanagement, sondern ist häufig eine Konsequenz aus Kommunikation und Kollaboration.
 Nachfolgend werden alle Softwaresysteme genannt, welche in irgendeiner Form als Repository für Erfahrungsmanagement genutzt werden:
@@ -150,7 +152,7 @@ Um dieses Problem zu lösen, sollte ein einheitlicher Prozess für eine Experien
 Weiterhin muss die Experience Factory in die Entwicklungsprozesse integriert werden, damit die Experience Base kontinuierlich wächst und verbessert wird.
 Wenn ein Mitarbeiter nach einer Information sucht muss klar sein wie und wo diese Information zu finden ist.
 
-## Agiler Entwicklungsprozess bei der COMPRA GmbH
+## Agiler Entwicklungsprozess
 
 In diesem Kapitel wird der agile Entwicklungsprozess bei der COMPRA GmbH aufgezeigt und weiterhin ermittelt, wie der Betrieb einer Experience Factory in diesen integriert werden kann.
 
@@ -159,10 +161,10 @@ Dabei arbeiten die Teams nach einem agilen Manifest mit Scrum [@scrum_guide_2020
 
 Als Beispiel betrachten wir das Allstars Team mit dem Projekt Rossmann Central Europe.
 Das Allstars Team entwickelt und betreut den Betrieb einer kundenspezifische Version des ERP Systems eEvolution 10 für Rossmann Ungarn und Rossmann Tschechien.
-Das Team besteht aus einem Scrum Master aus einem anderen Team bei der COMPRA GmbH, einem Product Owner von Rossmann Ungarn, einem Product Owner von Rossmann Tschechien und 5 Entwicklern sowie einem Auszubildenden.
+Das Team besteht aus einem Scrum Master, einem Product Owner von Rossmann Ungarn, einem Product Owner von Rossmann Tschechien und 5 Entwicklern sowie einem Auszubildenden.
 Das Product Backlog im Team Foundation Server ist eine Liste von Features, User Stories und Issues und stellt die zentrale Quelle an Arbeit für das Team dar.
-Ein Feature ist hier gleichzusetzen mit einem Product Goal und beschreibt den Zielzustand eines Teiles des Produktes. Um diesen Zielzustand zu erreichen werden User Stories unterhalb eines Features definiert, welche umgesetzt werden müssen um das Ziel des Features zu erreichen. Dabei sollten User Stories im Umfang idealerweise möglichst klein sein, damit sie innerhalb eines Sprints abgeschlossen werden können und der Aufwand für dieses Workitem besser abschätzbar ist.
-Issues sind für ungeplante Arbeit, also Probleme welche während eines Sprints auftauchen und schnell gelöst werden müssen. Dies kann alle Arten von Problemen beinhalten welche durch das Scrum Team gelöst werden. (Bugs in laufender Software, Support für User etc.)
+Ein Feature ist hier gleichzusetzen mit einem Product Goal und beschreibt den Zielzustand eines Teiles des Produktes bzw Systems. Um diesen Zielzustand zu erreichen werden User Stories unterhalb eines Features definiert, welche umgesetzt werden müssen um das Ziel des Features zu erreichen. Dabei sollten User Stories im Umfang idealerweise möglichst klein sein, damit sie innerhalb eines Sprints abgeschlossen werden können und der Aufwand besser abschätzbar ist.
+Issues sind für ungeplante Arbeit, also Probleme welche während eines Sprints auftauchen und meist schnell gelöst werden müssen. Dies kann alle Arten von Problemen beinhalten welche durch das Scrum Team gelöst werden (Bugs, Support etc.).
 Sprints werden grundsätzlich für eine Dauer von zwei Wochen geplant. Zum Ende eines Sprints werden sowohl ein Sprint Review, eine Retrospektive als auch ein Planning für den nächsten Sprint durchgeführt.  
 
 
@@ -173,6 +175,7 @@ Weiterhin gilt es zu entscheiden, welche Mitarbeiter aktiv für den Aufbau und d
 In [@tautz_2001] und [@althoff_birk_1997] wird die Experience Factory als eine eigene Organisationsstruktur mit dedizierten Experience Engineers beschrieben (siehe Abbildung 1).
 
 ![Experience Factory](https://d3i71xaburhd42.cloudfront.net/c419184e0c45ed31e62036bf94878fdfef3808b6/1-Figure1-1.png)  
+
 Für die COMPRA GmbH als mittelständiges, agiles Unternehmen mit Full-Stack Teams ist es unangebracht, Experience Engineers in einem eigenen Team zu beschäftigen.
 Stattdessen sollte es pro Team einige wenige Mitarbeiter geben, welche als zusätzliche Rolle aktiv für den Prozess der Experience Factory verantwortlich sind. Im Sinne von Agile würde dies im Unternehmen eher als eine Guild oder ein Chapter beschrieben werden.
 Eine Gilde ist eine Gruppe von Mitarbeitern aus verschiedenen Teams, welche gemeinsam an einem gewissen Thema oder einer Kompetenz arbeiten und sich regelmäßig dazu austauschen.
@@ -358,30 +361,70 @@ R29 configurations, R32 browsing, R41 interface information, R42 application his
 **Anforderungen:** R27 artifacts’ status  
 **Dekomposition:** -  
 
+* **T55 package**
+**Ziel:** Effektivität und Effizienz des SEEMS verbessern.
+**Anforderungen:** keine
+**Dekomposition:** T56 structure
 
-## Repräsentation von Software Engineering Erfahrungen
+* **T56 structure**
+**Ziel:** Das Wissen in der Experience Base verändern und die Infrastruktur darauf anpassen.
+**Anforderungen:** : R12 accommodation of new artifact kinds, R13 maintenance of conceptual information
+**Dekomposition:** -
+
+## REFSENO
 
 Eine der elementarsten Fragen für den Aufbau einer neuen Experience Base ist, nach welchem Schema das Erfahrungsartefakte strukturiert sein sollen. Dies ist wichtig, um einerseits das Erfassen von Artefakten einfach und intuitiv zu halten und sie in der alltäglichen Kommunikation verwenden zu können, aber auch um die spezifischen Anforderungen des Unternehmens sowie der Softwareentwicklung abzudecken.
 
-### REFSENO
 REFSENO (representation formalism for software engineering ontologies) [@tautz_wagenheim_1998] [@tautz_2001 Kapitel 6] beschreibt ein Schema für Erfahrungsartefakte, um diese optimal im Bereich der Softwareentwicklung nutzen zu können.
 Es handelt sich um eine Kombination aus Ideen der Bereiche Datenbanken, fallbasiertes Schließen und wissensbasierten Systemen. Es ist ein objektorientiertes Modell und hat Ähnlichkeiten zu UML.
 
-REFSENO's zentrales Element wird durch "concepts" definiert, welche Software Engineering Artefakte modellieren. Concepts setzen sich durch Attribute zusammen, welches entweder Informationen für Storage und Retrieval enthalten oder Relationen zu anderen Artefakten beschreiben (terminal and non terminal attributes).
+REFSENO's zentrales Element wird durch concepts definiert, welche Software Engineering Artefakte modellieren. Concepts setzen sich durch Attribute zusammen, welches entweder Informationen für Storage und Retrieval enthalten oder Relationen zu anderen Artefakten beschreiben (terminal and non terminal attributes).
 Außerdem enthält REFSENO Formlen für die Definition der Ähnlichkeit (similarity), automatische Berechnung von Attributen (value inferences) und weitere Bedingungen, welche immer als true evaluiert werden müssen (assertations) [@tautz_2001 Seite 176-177].
 
-Folgend werden die Vorteile eines SEEMS beschrieben, welches auf REFSENO basiert [@tautz_wagenheim_1998 Seite 72]:
+In Abbildung 4, 5 und 6 sind Beispiele für termial und non-terminal attributes des concepts project zu sehen:
 
-* Vollständige und präzise Modellierung von Software Engineering Erfahrung
-* Explizite Repräsentation von Software Engineering Erfahrung in verschiedensten Anwendungsbereichen und Domänen
-* Eindeutige Terminologie, welche generelles und kontext-spezifisches Wissen unterscheidet, wodurch die Verwaltung des Wissens abhängig vom Kontext ermöglicht wird
-* Validierung von generellen Software Engineering Erfahrungsmodellen
-* Messbarkeit der Effektivität einer Experience Base abhängig von der Repräsentation der Software Engineering Erfahrung.
+![Project concept terminal attributes](project concept terminal attributes.JPG)
+
+![Project concept non-terminal attributes](project concept non terminal attributes.JPG)
+
+![Project concept non-terminal attributes graph](non terminal concept attributes.JPG)
 
 
-## Technische Infrastruktur Anforderungen
-In [@tautz_2001 Kapitel 3] wird beschrieben, welche Anforderungen an die technische Infrastruktur einer Experience Base gestellt werden.
-In Abbildung 5 werden alle Anforderungen und ihre Abhängigkeiten aufgelistet.  
+Folgend werden die vorteilhaften Eigenschaften von REFSENO aus einer praktischen Ansicht beschrieben [@tautz_2001 Seite 191 - 193]:
+
+* Objektorientiertes Modell, welches gut auf natürliche Weise zu beschreiben ist.
+* Möglichkeit der Entwicklung eines unternehmensweitem Vokabular zur Definition und Beschreibung des Schemas. Dies vereinfacht die Kommunikation.
+* Kombination von similarity-based retrieval und browsing maximiert die Fähigkeit, die richtigen Artefakte zu finden und das System zu verstehen.
+* Geringer Aufwand für die Pflege von Artefakten durch Konsistenz-Regeln ( z.B. Pflichtfelder, vordefinierte Wertebereiche oder automatisch berechnete Felder).
+* Modularität von Schemas ermöglicht einfache Erweiterung.
+* Unaufwändig anpassbar an unternehmensspezifische Anforderungen, Schemas können an fast jegliche Art von bereits vorhandenen Arten von Experience Repository angepasst werden.
+* Das Schema kann wachsen, neue Arten von Artefakten können hinzugefügt werden und bereits vorhanden Artefakt Typen können erweitert werden.
+* Spezialisiert auf den Bereich des Software Engineering, besonders im Bezug auf die Aspekte incompleteness, imprecision, inconsistency und uncertainty.
+
+Das Schema des SEEMS bei der COMPRA GmbH wird basierend auf REFSENO entwickelt werden.
+
+## GOODSEE
+
+Durch REFSENO wird ein Repräsentationsformalismun für Software Engineering Erfahrung definiert, wie der Inhalt einer Experience Base letztendlich aber struktiriert sein soll, ist stark abhängig von dem Unternehmen in der sie eingesetzt und muss auf die individuellen Anforderungen ausgelegt sein.
+Der Task T56 structure ist dafür zuständig, das Wissen in der Experience Base zu definieren und in Abhängigkeit davon die Architektur des SEEMS definierbar zu machen.
+
+GOODSEE (goal-oriented ontology development for software engineering experience) [@tautz_2001 Kapitel 8] ist eine Methodologie für die zielgerichtete Entwicklung eines Experiece Base Schemas.
+
+Der Ablauf von GOODSEE lässt sich in folgenden Schritten zusammenfassen:
+1. Identifikation von Stakeholdern und deren Interessen um Ziele der Experience Factory zu formulieren.
+2. Identifikation von Themenbereichen und Szenarien der Wissenakquisition und Wissenwiederverwendung (reuse).
+3. Definition der benötigten Information um identifizierte Szenarien erfüllen zu können.
+4. Definition des Experience Base Schemas mit REFSENO
+5. Definition von Vorschriften für die Erstellung von neuen Informationen
+6. Definition der Implementierung (Architektur)
+
+Carsten Tautz entwickelt in diesem Kapitel sein Task Framework für die Entwicklung von Experience Bases weiter, allerdings fokussiert auf den Aspekt der Strukturierung des Schemas (T56 structure).
+Die größte Herausforderung für die Entwicklung eines Schemas ist dabei die passende Balance zu finden. Balance heißt in diesem Fall, einerseits allgemein genung zu sein, um die gesamte Domäne abzudecken, andererseits aber speziell genung zu sein, um tatsächlich nützliche Artefakte für die Lösung von Problemen bereistellen zu können.
+
+
+## Anforderungen: Technische Infrakstruktur und Tasks
+In [@tautz_2001 Kapitel 3] wird beschrieben, welche Anforderungen an die technische Infrastruktur einer Experience Base gestellt werden, welche in
+Abbildung 5 mit all ihren Abhängigkeiten aufgelistet werden.  
 
 ![Anforderungen technische Infrastruktur](requirements technical infrastructure.JPG)  
 
@@ -404,6 +447,7 @@ Es kann vorteilhaft sein, solch ein neues System nicht mit zu vielen Features im
 * **R10 rationalized conceptual information**
 * **R11 modularity of conceptual information**
 * **R12 accomodation of new artifact kinds**
+* R13 maintenance of conceptual information
 * R14 maintenance of experience packages
 * **R17 artifact recording**
 * R18 various characterizations of one artifact
@@ -430,12 +474,12 @@ Es kann vorteilhaft sein, solch ein neues System nicht mit zu vielen Features im
 * R41 interface information
 * R42 application history  
 
-## Technische Infrastruktur Architektur
+## Architektur SEEMS
 
 In [@tautz_2001 Kapitel 7] wird eine Implementierung beschrieben mit welcher die Anforderungen an die technische Infrastruktur umgesetzt werden können.  
 Um die Anforderungen zu erfüllen verwendet Tautz eine Client-Server Architektur, welche in Abbildung 6 zu sehen ist.  
 
-![Architektur der technischen Infrastruktur](architecture of technical infrastructure.JPG)  
+![Architektur des SEEMS](architecture of technical infrastructure.JPG)  
 
 Die Architektur ist in drei Ebenen unterteilt:
 
@@ -455,6 +499,8 @@ Grundsätzlich ist eine Client Server Architektur für die COMPRA eine sinnvolle
 Für die Anwendungsebene bedeutet dies, dass aktuell bereits eingesetzte Software für die Experience Base verwendet werden kann.
 Der wichtigste Teil in der Anwendungsebene für die COMPRA GmbH ist dabei die Integration des Team Foundation Servers. Der Großteil der initialen Artefakten werden aus den vorhandenen Daten des TFS stammen.
 
-# Fazit
+# Fazit und Ausblick
+
+
 
 # Literaturverzeichnis
