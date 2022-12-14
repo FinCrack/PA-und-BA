@@ -23,35 +23,38 @@ Es wird die aktuelle Situation des Experience-Managements und der Experience-Rep
 Weiterhin werden die Bestandteile der DISER Methodologie aufgezeigt und erläutert. Diese unterteilen sich in einen Repräsentationsformalismus für Wissen und Erfahrung REFSENO, die Entwicklungsstrategie für Experience Base Schemas GOODSEE, ein generelles Task Framework für den Aufbau und Betrieb einer Experience Base sowie eine Architektur für die technische Infrastruktur eines SEEMS.  
 Das Ziel dieser und weiterführender Arbeit ist es, eine neue Experience Base bei der COMPRA GmbH aufzubauen.
 
+\newpage{}
 
 # Einleitung
 Welche Vorteile bietet es, dediziertes Experience Management im Bereich der Softwareentwicklung zu betreiben?
 Reicht es nicht aus, dass Wissen und Erfahrung im persönlichen Gespräch von Mitarbeiter zu Mitarbeiter weitergegeben oder sie sporadisch und in unterschiedlichsten Formen
-in einem Netzwerk, in einer Quellcodeverwaltung oder einem DMS abgelegt werden?  
-
+in einem Netzwerk, in einer Quellcodeverwaltung oder einem DMS abgelegt werden?
 Wie kann sichergestellt werden, dass das Wissen eines langjährigen Mitarbeiters nicht gänzlich verloren geht, wenn dieser das Unternehmen verlässt?
-Diese einleitenden Fragen geben einen guten ersten Eindruck, warum Erfahrungsmanagement im Bereich Softwareentwicklung eine zentrale Rolle für die Produktivität der Mitarbeiter
-und die Qualität der entwickelten Software spielt.
 
-[@tautz_2001] beschreibt in der Einleitung, dass der größte Vorteil im Wettbewerb von Unternehmen in der Softwareentwicklung darin besteht, bessere Software mit mehr Features schneller und mit geringeren Kosten entwickeln zu können.
+Diese einleitenden Fragen geben einen guten ersten Eindruck, warum Erfahrungsmanagement im Bereich Softwareentwicklung eine zentrale Rolle für die Produktivität der Mitarbeiter und die Qualität der entwickelten Software spielt.
+
+@tautz_2001 beschreibt in der Einleitung, dass der größte Vorteil im Wettbewerb von Unternehmen in der Softwareentwicklung darin besteht, bessere Software mit mehr Features schneller und mit geringeren Kosten entwickeln zu können.
 Dieses Know-How kann durch die Konkurrenz nicht imitiert werden, da es nicht von dem Softwareprodukt ableitbar ist.
 Daraus lässt sich schließen, dass Experience Management im Software Engineering ein entscheidender Vorteil ist, um sich von der Konkurrenz abzusetzen.
+
+\newpage{}
 
 
 # Experience Factory
 
-Eine Experience Factory [@althoff_birk_1997] [@tautz_2001] beschreibt eine Einheit in einem Softwareunternehmen, welche kontinuierliche und inkrementelle Verbesserung der Softwareentwicklung im Unternehmen erzeugen soll. Dies wird erreicht durch die Verarbeitung und Analyse aller Arten von Wissen und Erfahrung, welche im Kontext der Softwareentwicklung relevant sind.
+Eine Experience Factory ([@althoff_birk_1997] [@tautz_2001]) beschreibt eine Einheit in einem Softwareunternehmen, welche kontinuierliche und inkrementelle Verbesserung der Softwareentwicklung im Unternehmen erzeugen soll. Dies wird erreicht durch die Verarbeitung und Analyse aller Arten von Wissen und Erfahrung, welche im Kontext der Softwareentwicklung relevant sind.
 Sie dient als ein Repository (Experience Base) für dieses Wissen und entspricht einer Fallbasis im Sinne von Case-Based-Reasoning. Weiterhin ist die Experience Factory zuständig für die Administration der Experience Base.  
-In Kapitel 1.1 beschreibt Tautz das Konzept der Experience Factory durch einen Vergleich des CBR Zyklus mit dem Paradigma QIP.
+
+In [@tautz_2001 Kapitel 1.1] wird das Konzept der Experience Factory durch einen Vergleich mit dem case-based-reasoning Zyklus und dem Paradigma QIP beschrieben.
 
 
-Quality Improvement Paradigm [@basili_caldiera_rombach_2002] ist ein früher Ansatz für iterative Qualitätsverbesserung von Softwareprojekten.  
+Quality Improvement Paradigm ist ein früher Ansatz für iterative Qualitätsverbesserung von Softwareprojekten.  
 QIP zielt darauf ab, schon in der Startphase eines Softwareprojektes festzulegen, welche Erfahrungen daraus gewonnen werden können und wie dies konkret erreicht werden kann.
-QIP ist als eine Feedback Loop aufgebaut, welche durch die selbst auferlegten Ziele gesteuert wird. Im letzten Schritt von QIP wird die gewonnenen Erfahrungen in eine wieder verwendbare Form gebracht und aufbewahrt.  
+QIP ist als eine Feedback Loop aufgebaut, welche durch die selbst auferlegten Ziele gesteuert wird. Im letzten Schritt von QIP wird die gewonnenen Erfahrungen in eine wiederverwendbare Form gebracht und aufbewahrt.  
 Im Kontrast dazu ist der CBR Zyklus mehr technischer Natur, aber grundsätzlich zielen beide Ansätze auf das Gleiche ab: Ein Experience Model welches im Kontext der Softwareentwicklung wiederverwendet werden kann.
 
 
-[@basili_caldiera_rombach_2002] definiert die Experience Factory folgendermaßen:  
+@basili_caldiera_rombach_2002 definieren die Experience Factory folgendermaßen:  
 
 > The experience factory is a logical and/or physical organization that
 supports project developments by analyzing and synthesizing all
@@ -67,6 +70,8 @@ Da CBR und QIP schon damals einer iterativen Funktionsweise zugrunde lagen wird 
 Im Vergleich zum Gebrauch in einem Wasserfallmodell werden die Erfahrungsinkremente bei einem agilen Prozess kleiner und frequenter, aber einfacher zu verarbeiten sein.
 
 Folglich ist eine Experience Factory in den aktuellen agilen Entwicklungsprozess der COMPRA GmbH integrierbar.
+
+\newpage{}
 
 # Experience Repositories und Management
 
@@ -100,9 +105,9 @@ Nachfolgend werden alle Softwaresysteme genannt, welche in irgendeiner Form als 
     Verwaltung von Mitarbeitern und Kunden  
     CRM  
 
-* [eEvolution Wiki:](https://wwww.wikierp.de)
+* [eEvolution Wiki:](https://www.wikierp.de/)
 
-    Offizielles, zentrales Wiki für das ERP System eEvolution  
+    Offizielles Wiki für das ERP System eEvolution  
 
 * MS Teams:
 
@@ -126,9 +131,9 @@ Vergleichen wir diese Systeme mit den von Tautz aufgeführten vorhandenen Ansät
 * Relational and Object-Oriented DBMS
 
 Alle vorhandenen Repositories verfügen über die Möglichkeit über Full Text Search durchsucht zu werden.
-Der Team Foundation Server verwendet ein unkontrolliertes Keyword System, wobei jegliche Art von Workitem mit beliebigen Keywords versehen werden kann.
-Das eEvolution Wiki ist eine Website (Hypertext), verwendet also.
-eEvolution ist ein ERP System, welches mit einer relationalen Datenbank betrieben wird.
+Der Team Foundation Server (TFS) verwendet ein unkontrolliertes Keyword System, wobei jegliche Art von Workitem mit beliebigen Keywords versehen werden kann.
+Das eEvolution Wiki ist eine Website (Hypertext), eEvolution ist ein ERP System, welches mit einer relationalen Datenbank betrieben wird, ebenso liegt dem TFS eine relationale Datenbank zugrunde.
+Weiterhin sind einige Funktionalitäten des TFS (Umgang mit Workitems (User Stories, Issues, Features, Epics)) regelbasiert. Diese Regeln werden in Workitem und Workflow Templates definiert.
 
 Es gibt kein System, welches logikbasiert, wissensbasiert oder mit irgendeiner Form von KI arbeitet.
 
@@ -153,7 +158,7 @@ Dies führt zu einer großen Belastung von gewissen Senior Mitarbeitern, welche 
 
 Um dieses Problem zu lösen, sollte ein einheitlicher Prozess für eine Experience Factory entwickelt werden, damit Artefakte in genau einem Repository zu finden sind und Mitarbeiter wissen, wie diese Artefakte dort abgelegt werden sollen.
 Weiterhin muss die Experience Factory in die Entwicklungsprozesse integriert werden, damit die Experience Base kontinuierlich wächst und verbessert wird.
-Wenn ein Mitarbeiter nach einer Information sucht muss klar sein wie und wo diese Information zu finden ist.
+Wenn ein Mitarbeiter nach einer Information sucht muss klar sein wie und wo diese Information zu finden ist, sofern sie bereits im SEEMS existiert.
 
 ## Agiler Entwicklungsprozess
 
@@ -179,22 +184,24 @@ In [@tautz_2001] und [@althoff_birk_1997] wird die Experience Factory als eine e
 
 ![Experience Factory](https://d3i71xaburhd42.cloudfront.net/c419184e0c45ed31e62036bf94878fdfef3808b6/1-Figure1-1.png)  
 
-Für die COMPRA GmbH als mittelständiges, agiles Unternehmen mit Full-Stack Teams ist es unangebracht, Experience Engineers in einem eigenen Team zu beschäftigen.
-Stattdessen sollte es pro Team einige wenige Mitarbeiter geben, welche als zusätzliche Rolle aktiv für den Prozess der Experience Factory verantwortlich sind. Im Sinne von Agile würde dies im Unternehmen eher als eine Guild oder ein Chapter beschrieben werden.
+Für die COMPRA GmbH als mittelständiges, agiles Unternehmen mit Full-Stack Teams ist es unangebracht, Experience Engineers in einem eigenen Team zu beschäftigen.  
+Stattdessen sollte es pro Team einige wenige Mitarbeiter geben, welche die zusätzliche Rolle eines Experience Engineers einnehmen. Im Sinne von Agile würde dies im Unternehmen eher als eine Guild oder ein Chapter beschrieben werden.  
 Eine Gilde ist eine Gruppe von Mitarbeitern aus verschiedenen Teams, welche gemeinsam an einem gewissen Thema oder einer Kompetenz arbeiten und sich regelmäßig dazu austauschen.
-Die Konzepte von Guilds, Chapters und Tribes wurde erstmalig von Spotify eingesetzt, um Agile in großen Unternehmen besser skalierbar zu machen. [@kniberg2014] [@kniberg_ivarsson_2012]
-Ziel einer Gilde ist es, Erfahrung auszutauschen und das Unternehmen als ganzes zu verbessern. Sie sind also auch in kleineren Unternehmen sinnvoll und werden bereits von der COMPRA GmbH eingesetzt. Beispielsweise gibt es eine Consultant-Gilde und eine Entwickler-Gilde.
-Dies Ziele einer Gilde decken sich mit den Zielen der Experience Factory.
+Die Konzepte von Guilds, Chapters und Tribes wurde erstmalig von Spotify eingesetzt, um Agile in großen Unternehmen besser skalierbar zu machen ([@kniberg2014] [@kniberg_ivarsson_2012]).  
+Ziel einer Gilde ist es, Erfahrung auszutauschen und das Unternehmen als ganzes zu verbessern. Sie sind also auch in kleineren Unternehmen sinnvoll und werden bereits von der COMPRA GmbH eingesetzt. Beispielsweise gibt es eine Consultant-Gilde und eine Entwickler-Gilde.  
+Die Ziele einer Gilde decken sich mit den Zielen der Experience Factory.
 
 ![Agile und Scrum bei Spotify [@wardt_2022]](https://agilescrumgroup.nl/wp-content/uploads/Spotify-Model-Guild-740x456.png)
 
 
-Die einzelnen Mitglieder der Gilde sind also dafür verantwortlich die Erfahrung aus der Arbeit des eigenen Teams in die Experience Factory zu bringen, um dann gemeinsam mit der Gilde diese Artefakte zu analysieren und zu verpacken, damit das Wissen im Unternehmen wieder verwendbar ist.
+Die einzelnen Mitglieder der Gilde sind also dafür verantwortlich die Erfahrung aus der Arbeit des eigenen Teams in die Experience Factory zu bringen, um dann gemeinsam mit der Gilde diese Artefakte zu analysieren und zu verpacken, damit das Wissen im Unternehmen wiederverwendbar ist.
+
+\newpage{}
 
 # DISER  
 
-DISER (designing and implementing software engineering repositories) ist eine Methodologie für den Entwurf und die Implementierung eines Experience Management Systems im Kontext der Softwareentwicklung und zielt darauf ab, diesen Prozess effektiv und effizient zu machen.  
-DISERR soll eine Alternative zur üblich gelebten Praxis bieten, welche normalerweise daraus besteht, Kollegen zu befragen sowie manuell verschiedenste Datenquellen im Firmennetz zu durchsuchen.  
+DISER (designing and implementing software engineering repositories) ist eine Methodologie für den Entwurf und die Implementierung eines Experience Management Systems im Kontext der Softwareentwicklung und zielt darauf ab, diesen Prozess effektiv und effizient zu gestalten.  
+DISER soll eine Alternative zur üblich gelebten Praxis bieten, welche normalerweise daraus besteht, Kollegen zu befragen sowie manuell verschiedenste Datenquellen im Firmennetz zu durchsuchen.  
 Die grundlegende Strategie von DISER ist dabei "learning from examples", welche bereits im Feld des Machine Learning erfolgreich angewendet wird. Erfahrungen aus vergangenen Softwareprojekten werden in einem System gespeichert und für die Wiederverwendung in anderen Projekten aufbereitet, um Probleme und Anforderungen in diesen Projekten effizienter und effektiver lösen zu können. Dabei wird das wiederverwendbare Wissen inkrementell erweitert und verbessert um ein kontinuierliches Lernen zu erreichen [@tautz_2001 Kapitel 1].  
 
 ## Task Framework
@@ -209,7 +216,7 @@ In Abbildung 3 ist die Task-Hierarchie zu sehen.
 
 
 * **T2 reuse**  
-**Ziel:** Die Wiederverwendung von Wissen und Erfahrung ist das zentrale Konzept der Experience Base und soll Qualität und Geschwindigkeit bei geringerem Aufwand erzielen.  
+**Ziel:** Die Wiederverwendung von Wissen und Erfahrung ist das zentrale Konzept der Experience Base und soll Qualität und Geschwindigkeit in der Softwareentwicklung steigern und den Aufwand verringern.
 **Anforderungen:** R18 various characterizations of one artifact  
 **Dekomposition:** T3 retrieve, T22 utilize  
 
@@ -365,63 +372,63 @@ R29 configurations, R32 browsing, R41 interface information, R42 application his
 **Anforderungen:** R27 artifacts’ status  
 **Dekomposition:** -  
 
-* **T55 package**
-**Ziel:** Effektivität und Effizienz des SEEMS verbessern.
-**Anforderungen:** keine
-**Dekomposition:** T56 structure
+* **T55 package**  
+**Ziel:** Effektivität und Effizienz des SEEMS verbessern.  
+**Anforderungen:** keine  
+**Dekomposition:** T56 structure  
 
 * **T56 structure**  
 **Ziel:** Das Wissen in der Experience Base verändern und die Infrastruktur darauf anpassen.  
 **Anforderungen:** : R12 accommodation of new artifact kinds, R13 maintenance of conceptual information  
-**Dekomposition:** -  
+**Dekomposition:** Siehe Kapitel GOODSEE  
 
 ## REFSENO
 
-Eine der elementarsten Fragen für den Aufbau einer neuen Experience Base ist, nach welchem Schema das Erfahrungsartefakte strukturiert sein sollen. Dies ist wichtig, um einerseits das Erfassen von Artefakten einfach und intuitiv zu halten und sie in der alltäglichen Kommunikation verwenden zu können, aber auch um die spezifischen Anforderungen des Unternehmens sowie der Softwareentwicklung abzudecken.
+Eine der elementarsten Fragen für den Aufbau einer neuen Experience Base ist, nach welchem Schema das SEEMS strukturiert sein sollen. Dies ist wichtig, um einerseits das Erfassen von Artefakten einfach und intuitiv zu halten und sie in der alltäglichen Kommunikation verwenden zu können, aber auch um die spezifischen Anforderungen des Unternehmens sowie der Softwareentwicklung abzudecken.
 
-REFSENO (representation formalism for software engineering ontologies) [@tautz_wagenheim_1998] [@tautz_2001 Kapitel 6] beschreibt ein Schema für Erfahrungsartefakte, um diese optimal im Bereich der Softwareentwicklung nutzen zu können.
+REFSENO (representation formalism for software engineering ontologies) [@tautz_wagenheim_1998] [@tautz_2001 Kapitel 6] beschreibt, wie ein Schema formal aufgebaut sein muss, um dieses optimal im Bereich der Softwareentwicklung nutzen zu können.
 Es handelt sich um eine Kombination aus Ideen der Bereiche Datenbanken, fallbasiertes Schließen und wissensbasierten Systemen. Es ist ein objektorientiertes Modell und hat Ähnlichkeiten zu UML.
 
-REFSENO's zentrales Element wird durch concepts definiert, welche Software Engineering Artefakte modellieren. Concepts setzen sich durch Attribute zusammen, welches entweder Informationen für Storage und Retrieval enthalten oder Relationen zu anderen Artefakten beschreiben (terminal and non terminal attributes).
-Außerdem enthält REFSENO Formlen für die Definition der Ähnlichkeit (similarity), automatische Berechnung von Attributen (value inferences) und weitere Bedingungen, welche immer als true evaluiert werden müssen (assertations) [@tautz_2001 Seite 176-177].
+REFSENO's zentrales Element wird durch Concepts definiert, welche Software Engineering Artefakte modellieren. Concepts setzen sich durch Attribute zusammen, welches entweder Informationen für Storage und Retrieval enthalten oder Relationen zu anderen Artefakten beschreiben (terminal and non terminal Attributes).
+Außerdem enthält REFSENO Formeln für die Definition der Ähnlichkeit (similarity), automatische Berechnung von Attributen (value inferences) und weitere Bedingungen, welche immer als true evaluiert werden müssen (assertations) [@tautz_2001 Seite 176-177].
 
-In Abbildung 4, 5 und 6 sind Beispiele für termial und non-terminal attributes des concepts project zu sehen:
+In Abbildung 4, 5 und 6 sind Beispiele für termial und non-terminal Attributes des Beispiel Concepts "Project" zu sehen:
 
 ![Project concept terminal attributes](project concept terminal attributes.JPG)
 
 ![Project concept non-terminal attributes](project concept non terminal attributes.JPG)
 
-![Project concept non-terminal attributes graph](non terminal concept attributes.JPG)
-
+![Non-terminal attributes graph](non terminal concept attributes.JPG)
 
 Folgend werden die vorteilhaften Eigenschaften von REFSENO aus einer praktischen Ansicht beschrieben [@tautz_2001 Seite 191 - 193]:
 
 * Objektorientiertes Modell, welches gut auf natürliche Weise zu beschreiben ist.
 * Möglichkeit der Entwicklung eines unternehmensweitem Vokabular zur Definition und Beschreibung des Schemas. Dies vereinfacht die Kommunikation.
-* Kombination von similarity-based retrieval und browsing maximiert die Fähigkeit, die richtigen Artefakte zu finden und das System zu verstehen.
+* Kombination von similarity-based Retrieval und Browsing maximiert die Fähigkeit, die richtigen Artefakte zu finden und das System zu verstehen.
 * Geringer Aufwand für die Pflege von Artefakten durch Konsistenz-Regeln ( z.B. Pflichtfelder, vordefinierte Wertebereiche oder automatisch berechnete Felder).
 * Modularität von Schemas ermöglicht einfache Erweiterung.
 * Unaufwändig anpassbar an unternehmensspezifische Anforderungen, Schemas können an fast jegliche Art von bereits vorhandenen Arten von Experience Repository angepasst werden.
 * Das Schema kann wachsen, neue Arten von Artefakten können hinzugefügt werden und bereits vorhanden Artefakt Typen können erweitert werden.
-* Spezialisiert auf den Bereich des Software Engineering, besonders im Bezug auf die Aspekte incompleteness, imprecision, inconsistency und uncertainty.
+* Spezialisiert auf den Bereich des Software Engineering, besonders im Bezug auf die Aspekte Incompleteness, Imprecision, Inconsistency und Uncertainty.
 
 Das Schema des SEEMS bei der COMPRA GmbH wird basierend auf REFSENO entwickelt werden.
 
 ## GOODSEE
 
-Durch REFSENO wird ein Repräsentationsformalismun für Software Engineering Erfahrung definiert, wie der Inhalt einer Experience Base letztendlich aber struktiriert sein soll, ist stark abhängig von dem Unternehmen in der sie eingesetzt wird und muss auf die individuellen Anforderungen ausgelegt sein.
+Durch REFSENO wird ein Repräsentationsformalismus für Software Engineering Erfahrung definiert. Wie der eigentliche Inhalt einer Experience Base letztendlich aber aussehen soll, ist stark abhängig von dem Unternehmen in der sie eingesetzt wird und muss auf die individuellen Anforderungen ausgelegt sein.
 Der Task T56 structure ist dafür zuständig, das Wissen in der Experience Base zu definieren und in Abhängigkeit davon die Architektur des SEEMS definierbar zu machen.
 
-GOODSEE (goal-oriented ontology development for software engineering experience) [@tautz_2001 Kapitel 8] ist eine Methodologie für die zielgerichtete Entwicklung eines Experiece Base Schemas, ebenfalls spezialisiert auf den Bereich des Software Engineerings.
+GOODSEE (goal-oriented ontology development for software engineering experience) [@tautz_2001 Kapitel 8] ist eine Methodologie für die zielgerichtete Entwicklung eines Experience Base Schemas, ebenfalls spezialisiert auf den Bereich des Software Engineerings.
 
 Der Ablauf von GOODSEE lässt sich in folgenden Schritten zusammenfassen:
 
 1. Identifikation von Stakeholdern und deren Interessen um Ziele der Experience Factory zu formulieren.  
-2. Identifikation von Themenbereichen und Szenarien der Wissenakquisition und Wissenwiederverwendung (reuse).  
+2. Identifikation von Themenbereichen und Szenarien der Wissensakquisition und Wissenswiederverwendung (Reuse).  
 3. Definition der benötigten Information um identifizierte Szenarien erfüllen zu können.  
 4. Definition des Experience Base Schemas mit REFSENO  
 5. Definition von Vorschriften für die Erstellung von neuen Informationen  
 6. Definition der Implementierung (Architektur)  
+
 
 Carsten Tautz entwickelt in diesem Kapitel das Task Framework für die Entwicklung von Experience Bases weiter, allerdings fokussiert auf den Aspekt der Strukturierung des Schemas (T56 structure).
 Die größte Herausforderung für die Entwicklung eines Schemas ist dabei die passende Balance zu finden. Balance heißt in diesem Fall, einerseits allgemein genug zu sein, um die gesamte Domäne abzudecken, andererseits aber speziell genug zu sein, um tatsächlich nützliche Artefakte für die Lösung von Problemen bereitstellen zu können.
@@ -431,14 +438,14 @@ In Abbildung 5 ist die gesamte Task Hierarchie von GOODSEE zu sehen. Die Entwick
 
 ![T56 Task Hierarchie](T56 structure hierarchy.JPG)
 
+\newpage{}
 
 ## Anforderungen
-In [@tautz_2001 Kapitel 3] wird beschrieben, welche Anforderungen an die technische Infrastruktur einer Experience Base gestellt werden, welche in
-Abbildung 6 mit all ihren Abhängigkeiten aufgelistet werden.  
+In [@tautz_2001 Kapitel 3] wird beschrieben, welche Anforderungen an die technische Infrastruktur einer Experience Base gestellt werden. Sie werden in Abbildung 6 mit all ihren Abhängigkeiten aufgelistet.  
 
 ![Anforderungen technische Infrastruktur](requirements technical infrastructure.JPG)  
 
-Tautz benennt R12, R38 und R39 sowie all ihre Abhängigkeiten als die elementarsten für den Aufbau einer Experience Base und diese Anforderungen bilden somit das Minimal Viable Product für eine Experience Base.
+Tautz benennt R12, R38 und R39 sowie all ihre Abhängigkeiten als die elementarsten für den Aufbau einer Experience Base und diese Anforderungen bilden somit das Minimal Viable Product für ein SEEMS.
 
 R12 stellt sicher, dass neue Arten von Artefakten angelegt werden können. Da eine Experience Base in einem Unternehmen über einen längeren Zeitraum wächst, wird auch die Art und Struktur der Erfahrungs-Artefakte sich im Laufe der Zeit ändern.  
 R38 bestimmt, dass überhaupt Artefakte in der Experience Base angelegt und gespeichert werden können.  
@@ -447,6 +454,7 @@ R39 besagt, dass nur Artefakte beim Retrieval zurückgegeben werden, welche für
 Die nachfolgende Liste benennt alle Anforderungen der COMPRA GmbH an eine Experience Base. Dabei werden die fett markierten Anforderungen als zwingend notwendig erachtet (MVP von Tautz), bei allen weiteren Anforderungen kann bei der Implementierung evaluiert werden, ob der Verlust eines Features für den initialen Prototypen angemessen ist, um den Entwicklungsaufwand zu verringern.
 Es kann vorteilhaft sein, solch ein neues System nicht mit zu vielen Features im ersten Prototypen zu entwickeln, um früh auf Feedback der Mitarbeiter eingehen zu können und die weitere Entwicklung diesem Feedback anpassen zu können, damit das System letztendlich für die COMPRA GmbH den größten Nutzen hat.
 
+\newpage{}
 
 * R2 support for incremental, continuous learning
 * R3 tool integration
@@ -484,6 +492,8 @@ Es kann vorteilhaft sein, solch ein neues System nicht mit zu vielen Features im
 * R41 interface information
 * R42 application history  
 
+\newpage{}
+
 ## Architektur
 
 In [@tautz_2001 Kapitel 7] wird eine Implementierung beschrieben mit welcher die Anforderungen an die technische Infrastruktur umgesetzt werden können.  
@@ -499,7 +509,7 @@ Die Architektur ist in drei Ebenen unterteilt:
 
 Auf der Anwendungseben befinden sich alle Arten von Software, mit welchen der User interagiert. Diese werden unterteilt in Artefakt Tools und Experience-Base Tools.  
 Artefakt Tools sind für die Entwicklung und Wartung von spezifischen Arten von Artefakten zuständig (Text/Dokument Editor, Prozess Modellierung, Code (Funktionen, Komponenten) etc.).  
-Experience-Base Tools werden für die Wartung der Experience Base verwendet. Sie sind unabhängig von der Art der Artefakte (Verwaltung von Einträgen in der Experiece Base, Analyse Tools).  
+Experience-Base Tools werden für die Wartung der Experience Base verwendet. Sie sind unabhängig von der Art der Artefakte (Verwaltung von Einträgen in der Experience Base, Analyse Tools).  
 
 Die Zugriffebene ist für die Synchronisation zwischen Anwendungs- und Datenbankebene verantwortlich. Sie steuert Zugriffsrechte, erstellt Statistiken über Zugriffe und speichert Feedback für die Verbesserung der Infrastruktur (bspw. Windows Server mit gewissen Rollen und Features).  
 
@@ -509,13 +519,16 @@ Grundsätzlich ist eine Client Server Architektur für die COMPRA eine sinnvolle
 Für die Anwendungsebene bedeutet dies, dass aktuell bereits eingesetzte Software für die Experience Base verwendet werden kann.
 Der wichtigste Teil in der Anwendungsebene für die COMPRA GmbH ist dabei die Integration des Team Foundation Servers. Der Großteil der initialen Artefakten werden aus den vorhandenen Daten des TFS stammen.
 
+\newpage{}
+
 # Fazit und Ausblick
 
 In dieser Arbeit wurde die Entwicklung eines SEEMS bei der COMPRA GmbH mit der DISER Methodologie evaluiert. Die aktuell bei der COMPRA gelebte Praxis und agile Arbeitsweise wurde aufgezeigt und es wurde analysiert, wie das Konzept einer Experience Factory in diese Praxis integriert werden kann.
 
-Weiterhin wurden die Bestandteile der DISER Methodologie betrachtet, welche ein Experience Management Task Framework, einen Repräsentationsformalismus (REFSENO), eine Strategie zur Entwicklung eines Experience Base Schemas (GOODSEE), einen Vorschlag für eine mögliche technische Infrastruktur sowie sämtliche Anforderungen an das SEEMS beinhaltet. Sie sollen einen effektiven und effizienten Weg zu einem funktionsfähigem Software Engineering Experience Managment System bieten.
+Weiterhin wurden die Bestandteile der DISER Methodologie betrachtet, welche ein Experience Management Task Framework, einen Repräsentationsformalismus (REFSENO), eine Strategie zur Entwicklung eines Experience Base Schemas (GOODSEE), einen Vorschlag für eine mögliche technische Infrastruktur sowie sämtliche Anforderungen an das SEEMS beinhaltet. Sie sollen einen effektiven und effizienten Weg zu einem funktionsfähigem Software Engineering Experience Management System bieten.
 
-Diese Arbeit ist eine Vorbereitung für nachfolgende Arbeiten, in welchen die hier gewonnenen Erkentnisse genutzt werden sollen, um die Entwicklung eines SEEMS bei der COMPRA GmbH durchzuführen. Wie durch DISER angedacht wird dabei zunächst ein Experience Base Schema nach GOODSEE und REFSENO entwickelt werden, anschließend die benötigte technische Infrastruktur definiert und umgesetzt um abschließend die benötigten Tools auf der Anwendungsebene bereitzustellen.
+Diese Arbeit ist eine Vorbereitung für nachfolgende Arbeiten, in welchen die hier gewonnenen Erkenntnisse genutzt werden sollen, um die Entwicklung eines SEEMS bei der COMPRA GmbH durchzuführen. Wie durch DISER angedacht wird dabei zunächst ein Experience Base Schema nach GOODSEE und REFSENO entwickelt werden, anschließend die benötigte technische Infrastruktur definiert und umgesetzt um abschließend die benötigten Tools auf der Anwendungsebene bereitzustellen.
 
+\newpage{}
 
 # Literaturverzeichnis
