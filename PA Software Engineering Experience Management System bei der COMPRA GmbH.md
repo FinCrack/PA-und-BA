@@ -9,20 +9,24 @@ urlcolor: "blue"
 bibliography: "bibliography.bib"
 language: "de-DE"
 csl: "harvard style.csl"
+include-before:
+- '`\newpage{}`{=latex}'
 
 ---
 
-<div style="page-break-after: always;"></div>
+\newpage{}
+
 
 # Zusammenfassung
-In der vorliegenden Projektarbeit soll evaluiert werden, ob die DISER Methodologie [@tautz_2001] geeignet ist, um bei der COMPRA GmbH ein Software Engineering Experience Management System (SEEM) zu entwickeln. Dieses System soll im Bereich der Softwareentwicklung des ERP Systems eEvolution und anderer Projekte der COMPRA GmbH Entscheidungsunterstützung bieten.
-Es wird die aktuelle Situation des Experience-Managements bei der COMPRA GmbH analysiert und im weiteren behandelt werden, wie die DISER Methodologie grundsätzlich aufgebaut ist und wie sie auf die Anforderungen der COMPRA GmbH sowie eine moderne agile Arbeitsweise angepasst werden kann.
+In der vorliegenden Projektarbeit wird evaluiert, inwiefern die DISER Methodologie [@tautz_2001] geeignet ist um bei der COMPRA GmbH ein Software Engineering Experience Management System (SEEMS) zu entwickeln. Dieses System soll im Bereich der Softwareentwicklung des ERP Systems eEvolution und anderer Projekte der COMPRA GmbH Unterstützung bieten und in Form einer Experience Factory betrieben werden.
+Es wird die aktuelle Situation des Experience-Managements und der Experience-Repositories sowie die gelebte Praxis und die Arbeitsweise bei der COMPRA GmbH analysiert.  
+Weiterhin werden die Bestandteile der DISER Methodologie aufgezeigt und erläutert. Diese unterteilen sich in einen Repräsentationsformalismus für Wissen und Erfahrung REFSENO, die Entwicklungsstrategie für Experience Base Schemas GOODSEE, ein generelles Task Framework für den Aufbau und Betrieb einer Experience Base sowie eine Architektur für die technische Infrastruktur eines SEEMS.  
 Das Ziel dieser und weiterführender Arbeit ist es, eine neue Experience Base bei der COMPRA GmbH aufzubauen.
 
 
 # Einleitung
-Warum ist Erfahrungsmanagement für Unternehmen, insbesondere im Bereich der Softwareentwicklung, so wichtig?
-Reicht es aus, dass Wissen und Erfahrung im persönlichen Gespräch von Mitarbeiter zu Mitarbeiter weitergegeben oder sie sporadisch und in unterschiedlichsten Formen
+Welche Vorteile bietet es, dediziertes Experience Management im Bereich der Softwareentwicklung zu betreiben?
+Reicht es nicht aus, dass Wissen und Erfahrung im persönlichen Gespräch von Mitarbeiter zu Mitarbeiter weitergegeben oder sie sporadisch und in unterschiedlichsten Formen
 in einem Netzwerk, in einer Quellcodeverwaltung oder einem DMS abgelegt werden?  
 
 Wie kann sichergestellt werden, dass das Wissen eines langjährigen Mitarbeiters nicht gänzlich verloren geht, wenn dieser das Unternehmen verlässt?
@@ -59,11 +63,10 @@ products, and other forms of knowledge via people, documents,
 and automated support.
 
 Die genannten Konzepte wurden in einer Zeit entwickelt, in welcher das häufigste Vorgehen in Softwareprojekten einer Form des Wasserfallmodells entsprach. Heutzutage, und auch bei der COMPRA GmbH, wird ein agiler Entwicklungsprozess bevorzugt.
-Der Fakt, dass CBR und QIP schon damals einer iterativen Funktionsweise zugrunde lagen zeigt, dass ein agiler, iterativer Entwicklungsansatz diese Arten von Prozessen noch viel besser einsetzen und einfacher Wert daraus gewinnen kann.
-Im Vergleich zum Gebrauch in einem Wasserfallmodell werden die Erfahrungsinkremente bei einem agilen Prozess kleiner, aber einfacher zu verarbeiten sein.
+Da CBR und QIP schon damals einer iterativen Funktionsweise zugrunde lagen wird deutlich, dass ein agiler, iterativer Entwicklungsansatz diese Arten von Prozessen noch viel besser einsetzen und einfacher Wert daraus gewinnen kann.
+Im Vergleich zum Gebrauch in einem Wasserfallmodell werden die Erfahrungsinkremente bei einem agilen Prozess kleiner und frequenter, aber einfacher zu verarbeiten sein.
 
 Folglich ist eine Experience Factory in den aktuellen agilen Entwicklungsprozess der COMPRA GmbH integrierbar.
-
 
 # Experience Repositories und Management
 
@@ -115,19 +118,19 @@ Nachfolgend werden alle Softwaresysteme genannt, welche in irgendeiner Form als 
 
 * Email und IP-Telefon
 
-Vergleichen wir diese Systeme mit den von Tautz aufgeführten vorhandenen Ansätzen für Erfahrungs-Repositories wird deutlich, dass eine ganze Reihe bei der COMPRA GmbH im Einsatz sind:
+Vergleichen wir diese Systeme mit den von Tautz aufgeführten vorhandenen Ansätzen für Erfahrungs-Repositories [@tautz_2001 Kapitel 5] wird deutlich, dass eine ganze Reihe bei der COMPRA GmbH im Einsatz sind:
 
-* Controlled / Uncontrolled Keyword System [Tautz001 5.1.4]
-* Full Text Search auf vorhandene Repositories [Tautz001 5.1.5]
-* Hypertext [Tautz001 5.2]
-* Relational and Object-Oriented DBMS [Tautz001 5.3.1 5.3.2]
+* Controlled / Uncontrolled Keyword System
+* Full Text Search auf vorhandene Repositories
+* Hypertext
+* Relational and Object-Oriented DBMS
 
 Alle vorhandenen Repositories verfügen über die Möglichkeit über Full Text Search durchsucht zu werden.
 Der Team Foundation Server verwendet ein unkontrolliertes Keyword System, wobei jegliche Art von Workitem mit beliebigen Keywords versehen werden kann.
-Das eEvolution Wiki ist eine Website, verwendet also Hypertext.
+Das eEvolution Wiki ist eine Website (Hypertext), verwendet also.
 eEvolution ist ein ERP System, welches mit einer relationalen Datenbank betrieben wird.
 
-Auffallend ist hier, dass nur eher simple Ansätze verwendet werden, welche ohne weiteren größeren Aufwand innerhalb der genannten Softwaresysteme betrieben werden können. Es gibt kein System, welches logikbasiert, wissensbasiert oder mit irgendeiner Form von KI arbeitet.
+Es gibt kein System, welches logikbasiert, wissensbasiert oder mit irgendeiner Form von KI arbeitet.
 
 ##  Erfahrungsmanagement Ist-Situation
 
@@ -194,7 +197,7 @@ DISER (designing and implementing software engineering repositories) ist eine Me
 DISERR soll eine Alternative zur üblich gelebten Praxis bieten, welche normalerweise daraus besteht, Kollegen zu befragen sowie manuell verschiedenste Datenquellen im Firmennetz zu durchsuchen.  
 Die grundlegende Strategie von DISER ist dabei "learning from examples", welche bereits im Feld des Machine Learning erfolgreich angewendet wird. Erfahrungen aus vergangenen Softwareprojekten werden in einem System gespeichert und für die Wiederverwendung in anderen Projekten aufbereitet, um Probleme und Anforderungen in diesen Projekten effizienter und effektiver lösen zu können. Dabei wird das wiederverwendbare Wissen inkrementell erweitert und verbessert um ein kontinuierliches Lernen zu erreichen [@tautz_2001 Kapitel 1].  
 
-## Tasks für den Aufbau einer Experience Base
+## Task Framework
 In [@tautz_2001 Kapitel 4] entwickelt Tautz ein allgemein gültiges Task Framework für den Aufbau und Betrieb einer Experience Base. Unternehmen können sich anhand dieser Task Hierarchie abhängig von ihren spezifischen Anforderungen selektieren, welche Aufgaben von der Experience Base ausgeführt werden sollen.
 Dabei definiert Tautz für jede Aufgabe das dadurch erreichte Ziel, Ein- und Ausgabe, die Anforderungen um die Tätigkeit ausführen zu können, eine Dekomposition in Unteraufgaben sowie eine allgemeine Beschreibung zur Ausführung der Aufgabe.
 In diesem Kapitel werden die Tasks selektiert, welche für den Betrieb einer Experience Base bei der COMPRA benötigt werden. Anhand dieser Tasks lassen sich die Anforderungen an das System festlegen. Die Tasks werden so selektiert, dass ein minimum viable product (MVP) entwickelt werden kann welches einerseits die Anforderungen der COMPRA GmbH erfüllt, andererseits aber auch keine nicht zwingend benötigten Features enthält.  
@@ -409,7 +412,7 @@ Das Schema des SEEMS bei der COMPRA GmbH wird basierend auf REFSENO entwickelt w
 Durch REFSENO wird ein Repräsentationsformalismun für Software Engineering Erfahrung definiert, wie der Inhalt einer Experience Base letztendlich aber struktiriert sein soll, ist stark abhängig von dem Unternehmen in der sie eingesetzt wird und muss auf die individuellen Anforderungen ausgelegt sein.
 Der Task T56 structure ist dafür zuständig, das Wissen in der Experience Base zu definieren und in Abhängigkeit davon die Architektur des SEEMS definierbar zu machen.
 
-GOODSEE (goal-oriented ontology development for software engineering experience) [@tautz_2001 Kapitel 8] ist eine Methodologie für die zielgerichtete Entwicklung eines Experiece Base Schemas.
+GOODSEE (goal-oriented ontology development for software engineering experience) [@tautz_2001 Kapitel 8] ist eine Methodologie für die zielgerichtete Entwicklung eines Experiece Base Schemas, ebenfalls spezialisiert auf den Bereich des Software Engineerings.
 
 Der Ablauf von GOODSEE lässt sich in folgenden Schritten zusammenfassen:
 
@@ -420,13 +423,18 @@ Der Ablauf von GOODSEE lässt sich in folgenden Schritten zusammenfassen:
 5. Definition von Vorschriften für die Erstellung von neuen Informationen  
 6. Definition der Implementierung (Architektur)  
 
-Carsten Tautz entwickelt in diesem Kapitel sein Task Framework für die Entwicklung von Experience Bases weiter, allerdings fokussiert auf den Aspekt der Strukturierung des Schemas (T56 structure).
-Die größte Herausforderung für die Entwicklung eines Schemas ist dabei die passende Balance zu finden. Balance heißt in diesem Fall, einerseits allgemein genung zu sein, um die gesamte Domäne abzudecken, andererseits aber speziell genung zu sein, um tatsächlich nützliche Artefakte für die Lösung von Problemen bereistellen zu können.
+Carsten Tautz entwickelt in diesem Kapitel das Task Framework für die Entwicklung von Experience Bases weiter, allerdings fokussiert auf den Aspekt der Strukturierung des Schemas (T56 structure).
+Die größte Herausforderung für die Entwicklung eines Schemas ist dabei die passende Balance zu finden. Balance heißt in diesem Fall, einerseits allgemein genug zu sein, um die gesamte Domäne abzudecken, andererseits aber speziell genug zu sein, um tatsächlich nützliche Artefakte für die Lösung von Problemen bereitstellen zu können.
+Die Tasks von GOODSEE versuchen eine solche Balance im Experience Base Schema zu finden.
+
+In Abbildung 5 ist die gesamte Task Hierarchie von GOODSEE zu sehen. Die Entwicklung eines SEEMS Schemas bei der COMPRA GmbH in nachfolgenden Arbeiten wird die GOODSEE Methodologie verwenden.
+
+![T56 Task Hierarchie](T56 structure hierarchy.JPG)
 
 
-## Anforderungen: Technische Infrakstruktur und Tasks
+## Anforderungen
 In [@tautz_2001 Kapitel 3] wird beschrieben, welche Anforderungen an die technische Infrastruktur einer Experience Base gestellt werden, welche in
-Abbildung 5 mit all ihren Abhängigkeiten aufgelistet werden.  
+Abbildung 6 mit all ihren Abhängigkeiten aufgelistet werden.  
 
 ![Anforderungen technische Infrastruktur](requirements technical infrastructure.JPG)  
 
@@ -476,10 +484,10 @@ Es kann vorteilhaft sein, solch ein neues System nicht mit zu vielen Features im
 * R41 interface information
 * R42 application history  
 
-## Architektur SEEMS
+## Architektur
 
 In [@tautz_2001 Kapitel 7] wird eine Implementierung beschrieben mit welcher die Anforderungen an die technische Infrastruktur umgesetzt werden können.  
-Um die Anforderungen zu erfüllen verwendet Tautz eine Client-Server Architektur, welche in Abbildung 6 zu sehen ist.  
+Um die Anforderungen zu erfüllen verwendet Tautz eine Client-Server Architektur, welche in Abbildung 7 zu sehen ist.  
 
 ![Architektur des SEEMS](architecture of technical infrastructure.JPG)  
 
@@ -503,6 +511,11 @@ Der wichtigste Teil in der Anwendungsebene für die COMPRA GmbH ist dabei die In
 
 # Fazit und Ausblick
 
+In dieser Arbeit wurde die Entwicklung eines SEEMS bei der COMPRA GmbH mit der DISER Methodologie evaluiert. Die aktuell bei der COMPRA gelebte Praxis und agile Arbeitsweise wurde aufgezeigt und es wurde analysiert, wie das Konzept einer Experience Factory in diese Praxis integriert werden kann.
+
+Weiterhin wurden die Bestandteile der DISER Methodologie betrachtet, welche ein Experience Management Task Framework, einen Repräsentationsformalismus (REFSENO), eine Strategie zur Entwicklung eines Experience Base Schemas (GOODSEE), einen Vorschlag für eine mögliche technische Infrastruktur sowie sämtliche Anforderungen an das SEEMS beinhaltet. Sie sollen einen effektiven und effizienten Weg zu einem funktionsfähigem Software Engineering Experience Managment System bieten.
+
+Diese Arbeit ist eine Vorbereitung für nachfolgende Arbeiten, in welchen die hier gewonnenen Erkentnisse genutzt werden sollen, um die Entwicklung eines SEEMS bei der COMPRA GmbH durchzuführen. Wie durch DISER angedacht wird dabei zunächst ein Experience Base Schema nach GOODSEE und REFSENO entwickelt werden, anschließend die benötigte technische Infrastruktur definiert und umgesetzt um abschließend die benötigten Tools auf der Anwendungsebene bereitzustellen.
 
 
 # Literaturverzeichnis
