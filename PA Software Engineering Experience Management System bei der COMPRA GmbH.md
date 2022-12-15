@@ -1,8 +1,9 @@
 ---
-title: "Software Engineering Experience Management System bei der COMPRA GmbH"
+title: "Evaluation: Software Engineering Experience Management System"
 date: \today
-author: "Lennard Brunke"
-fontsize: 11pt
+author: "Lennard Brunke COMPRA GmbH"
+email: "brunke@compra.de brunkel@uni-hildesheim.de"
+fontsize: 12pt
 documentclass: article
 link-citations: true
 urlcolor: "blue"
@@ -11,6 +12,10 @@ language: "de-DE"
 csl: "harvard style.csl"
 include-before:
 - '`\newpage{}`{=latex}'
+header-includes:
+- \usepackage{titling}
+- \pretitle{\begin{center}\LARGE\includegraphics[width=12cm]{compra_logo.png}\\[\bigskipamount]}
+- \posttitle{\end{center}}
 
 ---
 
@@ -185,9 +190,9 @@ In [@tautz_2001] und [@althoff_birk_1997] wird die Experience Factory als eine e
 ![Experience Factory](https://d3i71xaburhd42.cloudfront.net/c419184e0c45ed31e62036bf94878fdfef3808b6/1-Figure1-1.png)  
 
 Für die COMPRA GmbH als mittelständiges, agiles Unternehmen mit Full-Stack Teams ist es unangebracht, Experience Engineers in einem eigenen Team zu beschäftigen.  
-Stattdessen sollte es pro Team einige wenige Mitarbeiter geben, welche die zusätzliche Rolle eines Experience Engineers einnehmen. Im Sinne von Agile würde dies im Unternehmen eher als eine Guild oder ein Chapter beschrieben werden.  
+Stattdessen sollte es pro Team einige wenige Mitarbeiter geben, welche die zusätzliche Rolle eines Experience Engineers einnehmen. Im Sinne von Agile würde dies im Unternehmen eher als eine Gilde oder ein Kapitel beschrieben werden.  
 Eine Gilde ist eine Gruppe von Mitarbeitern aus verschiedenen Teams, welche gemeinsam an einem gewissen Thema oder einer Kompetenz arbeiten und sich regelmäßig dazu austauschen.
-Die Konzepte von Guilds, Chapters und Tribes wurde erstmalig von Spotify eingesetzt, um Agile in großen Unternehmen besser skalierbar zu machen ([@kniberg2014] [@kniberg_ivarsson_2012]).  
+Die Konzepte von Gilden, Kapiteln und Stämmen (guilds, chapters, tribes) wurde erstmalig von Spotify eingesetzt, um Agile in großen Unternehmen besser skalierbar zu machen ([@kniberg2014] [@kniberg_ivarsson_2012]).  
 Ziel einer Gilde ist es, Erfahrung auszutauschen und das Unternehmen als ganzes zu verbessern. Sie sind also auch in kleineren Unternehmen sinnvoll und werden bereits von der COMPRA GmbH eingesetzt. Beispielsweise gibt es eine Consultant-Gilde und eine Entwickler-Gilde.  
 Die Ziele einer Gilde decken sich mit den Zielen der Experience Factory.
 
